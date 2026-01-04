@@ -34,7 +34,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.png" // put your image in /public/logo.png
+              src="/bt.jpg.jpeg" // put your image in /public/logo.png
               alt="Logo"
               width={140}
               height={40}
