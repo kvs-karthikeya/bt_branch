@@ -88,16 +88,20 @@ export default function Home() {
   ]
 
   return (
-    <div className="space-y-0 bg-background">
+    <div className="space-y-0">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <video autoPlay loop muted playsInline preload="auto" className="w-full h-full object-cover opacity-30 grayscale">
-            <source
-              src="/mandi.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"></div>
+        <div className="absolute inset-0 z-[-1]">
+          <video
+           src="/mandi.mp4"
+           autoPlay
+           loop
+           muted
+           playsInline
+           preload="auto"
+           className="absolute inset-0 w-full h-full object-cover"
+           >
+         </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
