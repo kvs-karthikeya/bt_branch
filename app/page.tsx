@@ -90,8 +90,8 @@ export default function Home() {
   return (
     <div className="space-y-0 bg-background">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-background">
-          <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-30 filter grayscale">
+        <div className="absolute inset-0 z-0">
+          <video autoPlay loop muted playsInline preload="auto" className="w-full h-full object-cover opacity-30 grayscale">
             <source
               src="/mandi.mp4"
               type="video/mp4"
