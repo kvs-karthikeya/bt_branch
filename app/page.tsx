@@ -93,7 +93,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-background">
           <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-30 filter grayscale">
             <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-digital-circuit-board-animation-445-large.mp4"
+              src="/mandi.mp4"
               type="video/mp4"
             />
           </video>
