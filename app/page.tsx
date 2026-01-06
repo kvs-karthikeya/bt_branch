@@ -101,7 +101,7 @@ export default function Home() {
            className="absolute inset-0 w-full h-full object-cover"
            >
          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
