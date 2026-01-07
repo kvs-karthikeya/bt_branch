@@ -61,7 +61,7 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-4 py-2 text-xs uppercase tracking-widest font-bold transition-all duration-300 relative group ${
+                  className={`px-4 py-2 text-xs uppercase tracking-widest font-bold whitespace-nowrap transition-all duration-300 relative group ${
                     isLinkActive ? "text-primary" : "text-foreground hover:text-primary"
                   }`}
                 >
