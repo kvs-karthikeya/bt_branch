@@ -110,8 +110,8 @@ export default function Home() {
               className="text-7xl sm:text-8xl lg:text-9xl font-extralight tracking-tighter text-foreground leading-none"
               style={{ letterSpacing: "-0.04em" }}
             >
-              UNIVERSITY <br />
-              <span className="text-primary font-light">BRANCH</span>
+              Department of<br />
+              <span className="text-primary font-light">Biotechnology</span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground font-light tracking-[0.2em] uppercase">
               The Future of Learning
