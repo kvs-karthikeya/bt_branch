@@ -36,8 +36,8 @@ export default function Navigation() {
             <Image
               src="/btec.jpeg"
               alt="Logo"
-              width={400}
-              height={110}
+              width={230}
+              height={90}
               className="object-contain"
             />
           </Link>
