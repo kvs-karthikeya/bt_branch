@@ -77,6 +77,12 @@ export default function Home() {
       description: "Explore interactive visuals showcasing branch events, campus life, and achievements",
       href: "/gallery",
     },
+    {
+      icon: ImageIcon,
+      title: "About Us",
+      description: "Explore us",
+      href: "/about",
+    },
   ]
 
   const departmentSocials = [
