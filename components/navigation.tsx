@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-15">
+        <div className="flex justify-between items-center h-30">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -52,7 +52,7 @@ export default function Navigation() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 text-xs uppercase tracking-widest font-bold transition-all duration-300 relative group text-foreground hover:text-primary"
+                  className="px-4 py-2 text-xs uppercase tracking-widest font-bold whitespace-nowrap transition-all duration-300 relative group text-foreground hover:text-primary"
                 >
                   {item.label}
                   <div className="absolute bottom-1 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
