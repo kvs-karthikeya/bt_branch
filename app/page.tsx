@@ -96,8 +96,8 @@ export default function Home() {
   return (
     <div className="space-y-0">
       <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="relative h-[75vh] rounded-2xl overflow-hidden">
+       <div className="max-w-7xl mx-auto px-6">
+        <div className="relative h-[75vh] rounded-2xl overflow-hidden">
           <video
            src="/klu.mp4"
            autoPlay
@@ -109,6 +109,7 @@ export default function Home() {
            >
          </video>
           <div className="absolute inset-0 bg-black/30"></div>
+          </div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
