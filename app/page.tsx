@@ -109,7 +109,6 @@ export default function Home() {
            >
          </video>
           <div className="absolute inset-0 bg-black/30"></div>
-          </div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
@@ -140,6 +139,7 @@ export default function Home() {
           <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
           <span className="text-[10px] uppercase tracking-widest font-bold text-white">Scroll</span>
         </div>
+         </div>
       </section>
 
       <section className="relative bg-background py-32 sm:py-48 border-y border-border" ref={modulesRef}>
