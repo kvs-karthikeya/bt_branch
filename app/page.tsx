@@ -132,14 +132,14 @@ export default function Home() {
             >
               EXPLORE PLATFORM
             </button>
-          </div>
-        </div>
 
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
           <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
           <span className="text-[10px] uppercase tracking-widest font-bold text-white">Scroll</span>
         </div>
          </div>
+          </div>
+        </div>
       </section>
 
       <section className="relative bg-background py-32 sm:py-48 border-y border-border" ref={modulesRef}>
