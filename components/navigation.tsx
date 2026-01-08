@@ -36,9 +36,10 @@ export default function Navigation() {
             <Image
               src="/btec.jpeg"
               alt="Logo"
-              width={230}
-              height={90}
-              className="object-contain"
+              className="h-8 w-auto object-contain grayscale opacity-90 hover:opacity-100 transition"
+              width={0}
+              height={0}
+              className="h-9 w-auto object-contain"
             />
           </Link>
 
