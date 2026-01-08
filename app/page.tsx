@@ -95,8 +95,8 @@ export default function Home() {
 
   return (
     <div className="space-y-0">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-[-1]">
+      <section className="relative min-h-screen overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <video
            src="/klu.mp4"
            autoPlay
