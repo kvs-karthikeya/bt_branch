@@ -150,11 +150,11 @@ export default function FacultyPage() {
               className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
             >
               {/* Image */}
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+              <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
                 <img
                   src={faculty.image || "/placeholder.svg"}
                   alt={faculty.name}
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                 />
               </div>
 
