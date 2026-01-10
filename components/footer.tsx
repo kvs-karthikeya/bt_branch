@@ -9,7 +9,7 @@ export default function Footer() {
           {/* About */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold tracking-tight text-primary">About Us</h3>
-            <p className="text-base text-muted-foreground font-normal leading-relaxed">
+            <p className="text-base text-muted-foreground font-light leading-relaxed">
               Excellence in education and innovation. Dedicated to nurturing talent and fostering growth.
             </p>
           </div>
