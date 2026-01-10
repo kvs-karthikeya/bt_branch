@@ -35,7 +35,7 @@ const mockFaculty: Faculty[] = [
   },
   {
     id: "2",
-    name: "Prof. Nadeem Siddiqui",
+    name: "Dr. Nadeem Siddiqui",
     designation: "Associate Professor",
     subjects: ["Biochemistry", "Tissue Engineering"],
     batch: "Y24 & Y22",
