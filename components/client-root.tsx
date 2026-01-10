@@ -18,8 +18,6 @@ function ScrollToTop() {
 }
 
 export default function ClientRoot({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
-  const hideFooter = pathname === "/about-us"
   return (
     <>
       <ScrollToTop />
