@@ -9,7 +9,7 @@ export default function Footer() {
           {/* About */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold tracking-tight text-primary">About Us</h3>
-            <p className="text-sm text-muted-foreground font-light leading-relaxed">
+            <p className="text-base text-muted-foreground font-normal leading-relaxed">
               Excellence in education and innovation. Dedicated to nurturing talent and fostering growth.
             </p>
           </div>
@@ -17,27 +17,27 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold tracking-tight text-primary">Quick Links</h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-base">
               <li>
                 <Link
                   href="/resources"
-                  className="text-muted-foreground hover:text-primary transition-colors font-light"
+                  className="text-muted-foreground hover:text-primary transition-colors font-normal"
                 >
                   Resources
                 </Link>
               </li>
               <li>
-                <Link href="/faculty" className="text-muted-foreground hover:text-primary transition-colors font-light">
+                <Link href="/faculty" className="text-muted-foreground hover:text-primary transition-colors font-normal">
                   Faculty
                 </Link>
               </li>
               <li>
-                <Link href="/alumni" className="text-muted-foreground hover:text-primary transition-colors font-light">
+                <Link href="/alumni" className="text-muted-foreground hover:text-primary transition-colors font-normal">
                   Alumni
                 </Link>
               </li>
               <li>
-                <Link href="/bolt" className="text-muted-foreground hover:text-primary transition-colors font-light">
+                <Link href="/bolt" className="text-muted-foreground hover:text-primary transition-colors font-normal">
                   BOLT Club
                 </Link>
               </li>
@@ -47,7 +47,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold tracking-tight text-primary">Contact</h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-base">
               <li className="flex items-center gap-3 text-muted-foreground font-light">
                 <Mail size={16} className="text-primary" />
                 <span>info@university.edu</span>
@@ -66,7 +66,7 @@ export default function Footer() {
           {/* Social */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold tracking-tight text-primary">Follow Us</h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-base">
               <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-light">
                   Facebook
