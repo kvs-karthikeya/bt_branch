@@ -69,7 +69,7 @@ const mockFaculty: Faculty[] = [
     phone: "8555913247",
     officeNumber: "C-505",
     availableHours: "Mon-Sat: 9:20AM-5:30PM",
-    image: "/faculty/koti-reddy.jpg",
+    image: "/faculty/koti-reddy-sir.jpg.jpeg",
     linkedinUrl: "www.linkedin.com/in/koteswara-reddy-gujjula-323b2b20a",
   },
   {
