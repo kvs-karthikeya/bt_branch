@@ -23,7 +23,7 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
       <ScrollToTop />
       <Navigation />
       <main className="min-h-screen">{children}</main>
-      {pathname !== "/about" && <Footer />}
+      <Footer />
     </>
   )
 }
