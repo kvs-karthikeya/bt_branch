@@ -31,7 +31,7 @@ const mockFaculty: Faculty[] = [
     phone: "+1 (555) 123-4567",
     officeNumber: "CS-301",
     availableHours: "Mon-Fri: 2-4 PM",
-    image: "/diverse-professor-lecturing.png",
+    image: "/faculty/hod-praveen-kumar-vemuri.png",
     linkedinUrl: "https://linkedin.com/in/rajesh-kumar",
   },
   {
