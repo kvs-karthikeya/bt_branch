@@ -21,23 +21,23 @@ export default function Footer() {
               <li>
                 <Link
                   href="/resources"
-                  className="text-muted-foreground hover:text-primary transition-colors font-normal"
+                  className="text-muted-foreground hover:text-primary transition-colors font-light"
                 >
                   Resources
                 </Link>
               </li>
               <li>
-                <Link href="/faculty" className="text-muted-foreground hover:text-primary transition-colors font-normal">
+                <Link href="/faculty" className="text-muted-foreground hover:text-primary transition-colors font-light">
                   Faculty
                 </Link>
               </li>
               <li>
-                <Link href="/alumni" className="text-muted-foreground hover:text-primary transition-colors font-normal">
+                <Link href="/alumni" className="text-muted-foreground hover:text-primary transition-colors font-light">
                   Alumni
                 </Link>
               </li>
               <li>
-                <Link href="/bolt" className="text-muted-foreground hover:text-primary transition-colors font-normal">
+                <Link href="/bolt" className="text-muted-foreground hover:text-primary transition-colors font-light">
                   BOLT Club
                 </Link>
               </li>
