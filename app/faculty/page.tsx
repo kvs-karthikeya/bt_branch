@@ -167,10 +167,6 @@ export default function FacultyPage() {
                 <p className="text-sm text-primary font-medium mb-3">{faculty.designation}</p>
 
                 <div className="space-y-3 mb-4 text-sm">
-                  <div>
-                    <p className="text-muted-foreground">Department</p>
-                    <p className="text-foreground font-medium">{faculty.department}</p>
-                  </div>
 
                   <div>
                     <p className="text-muted-foreground">Subjects</p>
