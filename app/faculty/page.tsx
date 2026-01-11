@@ -43,8 +43,8 @@ const mockFaculty: Faculty[] = [
     phone: "9849629496",
     officeNumber: "C-516",
     availableHours: "Mon-Sat: 9:20AM - 5:30PM",
-    image: "/faculty/hod-praveen-kumar-sir-vemuri.png.jpeg",
-    linkedinUrl: "https://www.linkedin.com/in/vemuri-praveen-kumar-2850a96b/",
+    image: "",
+    linkedinUrl: "",
   },
   {
     id: "3",
@@ -56,8 +56,8 @@ const mockFaculty: Faculty[] = [
     phone: "9849629496",
     officeNumber: "C-516",
     availableHours: "Mon-Sat: 9:20AM - 5:30PM",
-    image: "/faculty/hod-praveen-kumar-sir-vemuri.png.jpeg",
-    linkedinUrl: "https://www.linkedin.com/in/vemuri-praveen-kumar-2850a96b/",
+    image: "",
+    linkedinUrl: "",
   },
   {
     id: "4",
