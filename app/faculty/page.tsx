@@ -108,7 +108,7 @@ const mockFaculty: Faculty[] = [
     phone: "7032470721",
     officeNumber: "C-514B",
     availableHours: "Mon-Sat: 9:20AM - 5:30PM",
-    image: "/faculty/mohammed-arifullah-sir.jpg.jpeg",
+    image: "/faculty/mohammed-arifullah.jpg",
     linkedinUrl: "https://www.linkedin.com/in/dr-nadeem-siddiqui-229999aa/",
   },
   {
