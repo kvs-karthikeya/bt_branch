@@ -34,10 +34,16 @@ export default function Home() {
     AOS.init({ duration: 800, once: true })
   }, [])
 
+  // 🔥 FORCE VIDEO PLAY AFTER AOS INIT
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = true
-      videoRef.current.play().catch(() => {})
+    const v = videoRef.current
+    if (v) {
+      v.muted = true
+      v.playsInline = true
+      const playPromise = v.play()
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {})
+      }
     }
   }, [])
 
