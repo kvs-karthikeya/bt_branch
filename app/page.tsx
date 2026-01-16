@@ -22,6 +22,7 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0)
   const [recruiterIndex, setRecruiterIndex] = useState(0)
   const modulesRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -31,6 +32,12 @@ export default function Home() {
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true })
+  }, [])
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {})
+    }
   }, [])
 
   const recruiters = [
