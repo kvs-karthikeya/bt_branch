@@ -177,7 +177,7 @@ export default function Home() {
               const Icon = feature.icon
               return (
                 <Link key={index} href={feature.href} className="group">
-                  <div className="relative h-full bg-secondary/50 backdrop-blur-sm border border-border rounded-2xl p-10 hover:border-primary/50 transition-all duration-500">
+                  <div className="relative h-full bg-secondary/50 backdrop-blur-sm border border-border rounded-2xl p-10 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:border-primary/50">
                     <div className="relative z-10 flex flex-col h-full space-y-6">
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500">
                         <Icon size={28} strokeWidth={1.5} />
