@@ -54,7 +54,7 @@ export default function ResourcesPage() {
       <DNAStrand />
       <div className="relative py-24 border-b border-border bg-gradient-to-b from-primary/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6">
+          <h1 className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6 animate-fade-in-up">
             Academic <span className="text-primary font-light italic">Intelligence</span>
           </h1>
           <p className="text-muted-foreground uppercase tracking-[0.3em] font-bold text-xs">Knowledge Repository</p>
@@ -106,3 +106,4 @@ export default function ResourcesPage() {
     </div>
   )
 }
+
