@@ -108,7 +108,7 @@ export default function BOLTPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlideIndex((prev) => (prev + 1) % allEventImages.length)
-    }, 5000) // Auto-advance every 5 seconds
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [allEventImages.length])
@@ -128,7 +128,7 @@ export default function BOLTPage() {
       {/* Hero Section */}
       <div className="bg-white border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6">
+          <h1 className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6 animate-fade-in-up">
             BOLT <span className="text-primary italic">Club</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
