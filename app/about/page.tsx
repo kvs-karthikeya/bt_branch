@@ -1,22 +1,20 @@
 "use client"
 
-import { Target, Award, Users, Mail, Phone, MapPin, Code } from "lucide-react"
-import DNAStrand from "@/components/dna-strand"
+import { Target, Award, Users, Mail, Phone, MapPin } from "lucide-react"
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background relative">
-      <DNAStrand />
       {/* High-tech Header */}
       <section className="relative py-32 border-b border-border overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-6 animate-fade-in-up">
+          <div className="max-w-3xl space-y-6">
             <h1 className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none animate-fade-in-up">
               ABOUT <br />
               <span className="text-primary">US</span>
             </h1>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed animate-fade-in-up">
+            <p className="text-xl text-muted-foreground font-light leading-relaxed">
               We are defining the intersection of academic excellence and digital innovation. Our mission is to create a
               seamless interface for the modern student.
             </p>
@@ -24,7 +22,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
       <section className="py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div className="space-y-6">
@@ -59,36 +56,67 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Developer Section */}
-      <section className="py-24 sm:py-32 bg-secondary/30 border-y border-border">
+      <section className="py-24 sm:py-32 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-20">
-            <h2 className="text-4xl sm:text-6xl font-light text-foreground tracking-tight">The Core Team</h2>
-            <p className="text-muted-foreground font-light">The architects behind the University Branch platform.</p>
+          <h2 className="text-4xl sm:text-6xl font-light tracking-tight text-foreground mb-20">
+            Message from Leadership
+          </h2>
+
+          {/* HOD Message */}
+          <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 order-2 lg:order-1 animate-fade-in-left">
+              <h3 className="text-2xl font-light text-foreground">Head of Department</h3>
+              <p className="text-muted-foreground font-light leading-relaxed">
+                "Education is not about filling minds with information, but igniting them with possibilities. At our
+                department, we believe in fostering excellence through innovation, collaboration, and a deep commitment
+                to student success. Our students are not just learners; they are pioneers shaping the future of
+                technology and academia."
+              </p>
+              <p className="text-muted-foreground font-light leading-relaxed">
+                "I am proud of what we have built here—a community where curiosity meets rigor, where challenges become
+                opportunities, and where every student finds their path to greatness."
+              </p>
+              <p className="text-primary font-medium">Dr. [HOD Name]</p>
+            </div>
+            <div className="order-1 lg:order-2 flex justify-center animate-fade-in-right">
+              <div className="w-64 h-80 rounded-2xl bg-secondary border border-border overflow-hidden shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop"
+                  alt="Head of Department"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="group relative bg-background border border-border rounded-2xl p-8 hover:border-primary transition-all duration-500"
-              >
-                <div className="flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                    <Code size={32} strokeWidth={1} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-foreground">Developer {i}</h3>
-                    <p className="text-sm text-primary">Full Stack Engineer</p>
-                  </div>
-                </div>
+          {/* Deputy HOD Message */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center animate-fade-in-left">
+              <div className="w-64 h-80 rounded-2xl bg-secondary border border-border overflow-hidden shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop"
+                  alt="Deputy Head of Department"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+            </div>
+            <div className="space-y-6 animate-fade-in-right">
+              <h3 className="text-2xl font-light text-foreground">Deputy Head of Department</h3>
+              <p className="text-muted-foreground font-light leading-relaxed">
+                "The strength of our department lies not in individual brilliance, but in our collective dedication to
+                nurturing talent. Every student who walks through our doors has the potential to change the world, and
+                our role is to provide them with the tools, mentorship, and inspiration they need."
+              </p>
+              <p className="text-muted-foreground font-light leading-relaxed">
+                "I witness daily the transformative power of education, and I am honored to be part of this journey with
+                our students and faculty."
+              </p>
+              <p className="text-primary font-medium">Prof. [Deputy HOD Name]</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-24 sm:py-32 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
