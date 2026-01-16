@@ -1,8 +1,15 @@
 "use client"
 
+import { useEffect } from "react"
 import { Target, Award, Users, Mail, Phone, MapPin } from "lucide-react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export default function AboutPage() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true })
+  }, [])
+
   return (
     <div className="min-h-screen bg-background relative">
       {/* High-tech Header */}
@@ -10,11 +17,18 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-6">
-            <h1 className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none animate-fade-in-up">
+            <h1
+              data-aos="fade-up"
+              className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none"
+            >
               ABOUT <br />
               <span className="text-primary">US</span>
             </h1>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="text-xl text-muted-foreground font-light leading-relaxed"
+            >
               We are defining the intersection of academic excellence and digital innovation. Our mission is to create a
               seamless interface for the modern student.
             </p>
@@ -24,7 +38,7 @@ export default function AboutPage() {
 
       <section className="py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-16">
-          <div className="space-y-6">
+          <div data-aos="fade-up" className="space-y-6">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
               <Target size={24} />
             </div>
@@ -34,7 +48,7 @@ export default function AboutPage() {
               knowledge.
             </p>
           </div>
-          <div className="space-y-6">
+          <div data-aos="fade-up" data-aos-delay="100" className="space-y-6">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
               <Award size={24} />
             </div>
@@ -44,7 +58,7 @@ export default function AboutPage() {
               utility.
             </p>
           </div>
-          <div className="space-y-6">
+          <div data-aos="fade-up" data-aos-delay="200" className="space-y-6">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
               <Users size={24} />
             </div>
@@ -58,13 +72,13 @@ export default function AboutPage() {
 
       <section className="py-24 sm:py-32 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl sm:text-6xl font-light tracking-tight text-foreground mb-20">
+          <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground mb-20">
             Message from Leadership
           </h2>
 
           {/* HOD Message */}
           <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 order-2 lg:order-1 animate-fade-in-left">
+            <div data-aos="fade-right" className="space-y-6 order-2 lg:order-1">
               <h3 className="text-2xl font-light text-foreground">Head of Department</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
                 "Education is not about filling minds with information, but igniting them with possibilities. At our
@@ -78,7 +92,7 @@ export default function AboutPage() {
               </p>
               <p className="text-primary font-medium">Dr. [HOD Name]</p>
             </div>
-            <div className="order-1 lg:order-2 flex justify-center animate-fade-in-right">
+            <div data-aos="fade-left" className="order-1 lg:order-2 flex justify-center">
               <div className="w-64 h-80 rounded-2xl bg-secondary border border-border overflow-hidden shadow-lg">
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop"
@@ -91,7 +105,7 @@ export default function AboutPage() {
 
           {/* Deputy HOD Message */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center animate-fade-in-left">
+            <div data-aos="fade-right" className="flex justify-center">
               <div className="w-64 h-80 rounded-2xl bg-secondary border border-border overflow-hidden shadow-lg">
                 <img
                   src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop"
@@ -100,7 +114,7 @@ export default function AboutPage() {
                 />
               </div>
             </div>
-            <div className="space-y-6 animate-fade-in-right">
+            <div data-aos="fade-left" className="space-y-6">
               <h3 className="text-2xl font-light text-foreground">Deputy Head of Department</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
                 "The strength of our department lies not in individual brilliance, but in our collective dedication to
@@ -120,7 +134,7 @@ export default function AboutPage() {
       <section className="py-24 sm:py-32 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-            <div className="space-y-8">
+            <div data-aos="fade-up" className="space-y-8">
               <h2 className="text-4xl font-light tracking-tight text-foreground">
                 Connect with the <br />
                 Department
@@ -130,21 +144,21 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
-              <div className="space-y-4">
+              <div data-aos="fade-up" className="space-y-4">
                 <div className="flex items-center gap-3 text-primary">
                   <Mail size={18} />
                   <span className="text-xs font-bold tracking-widest uppercase">Email</span>
                 </div>
                 <p className="text-foreground font-light">info@university-branch.edu</p>
               </div>
-              <div className="space-y-4">
+              <div data-aos="fade-up" data-aos-delay="100" className="space-y-4">
                 <div className="flex items-center gap-3 text-primary">
                   <Phone size={18} />
                   <span className="text-xs font-bold tracking-widest uppercase">Phone</span>
                 </div>
                 <p className="text-foreground font-light">+1 (555) 0123 4567</p>
               </div>
-              <div className="space-y-4 sm:col-span-2">
+              <div data-aos="fade-up" data-aos-delay="200" className="space-y-4 sm:col-span-2">
                 <div className="flex items-center gap-3 text-primary">
                   <MapPin size={18} />
                   <span className="text-xs font-bold tracking-widest uppercase">Location</span>
