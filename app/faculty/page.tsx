@@ -8,7 +8,6 @@ interface Faculty {
   id: string
   name: string
   designation: string
-  department: string
   subjects: string[]
   batch: string
   email: string
@@ -73,19 +72,6 @@ const mockFaculty: Faculty[] = [
     linkedinUrl: "https://linkedin.com/in/anjali-verma",
   },
   {
-    id: "5",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
-  },
-  {
     id: "6",
     name: "Dr. Nadeem Siddiqui",
     designation: "Associate Professor",
@@ -115,7 +101,12 @@ const mockFaculty: Faculty[] = [
     id: "8",
     name: "Dr. Koteswara Reddy Gujjula",
     designation: "Assistant Professor",
-    subjects: ["Biochemical Thermodynamics","Process Engineering Principles", "Bioprocess Economics and Plant Design", "Bioinformatics"],
+    subjects: [
+      "Biochemical Thermodynamics",
+      "Process Engineering Principles",
+      "Bioprocess Economics and Plant Design",
+      "Bioinformatics",
+    ],
     batch: "2017",
     email: "koteswarareddy@kluniversity.in",
     phone: "8555913247",
@@ -136,110 +127,6 @@ const mockFaculty: Faculty[] = [
     availableHours: "Mon-Sat: 9:20AM-5:30PM",
     image: "/faculty/dr-venkata-rajesh-yella.JPG",
     linkedinUrl: "https://www.linkedin.com/in/venkata-rajesh-yella-620ba1166/",
-  },
- {
-    id: "10",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
-  },
-  {
-    id: "11",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
-  },
-  {
-    id: "12",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
-  },
-  {
-    id: "13",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
-  },
-  {
-    id: "14",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
-  },
-  {
-    id: "15",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
-  },
-  {
-    id: "16",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
-  },
-  {
-    id: "17",
-    name: "",
-    designation: "",
-    subjects: [""],
-    batch: "",
-    email: "",
-    phone: "",
-    officeNumber: "",
-    availableHours: "",
-    image: "",
-    linkedinUrl: "",
   },
 ]
 
@@ -263,7 +150,9 @@ export default function FacultyPage() {
       {/* Header */}
       <div className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Faculty Directory</h1>
+          <h1 className="text-4xl font-light text-foreground mb-2 animate-fade-in-up" data-aos="fade-up">
+            Faculty Directory
+          </h1>
           <p className="text-muted-foreground">
             Connect with our experienced faculty members and find their office hours
           </p>
@@ -306,7 +195,6 @@ export default function FacultyPage() {
                 <p className="text-sm text-primary font-medium mb-3">{faculty.designation}</p>
 
                 <div className="space-y-3 mb-4 text-sm">
-
                   <div>
                     <p className="text-muted-foreground">Subjects</p>
                     <div className="flex flex-wrap gap-2 mt-1">
