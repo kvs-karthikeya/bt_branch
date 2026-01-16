@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+      </head>
       <body className="font-sans antialiased">
         <ClientRoot>{children}</ClientRoot>
       </body>
