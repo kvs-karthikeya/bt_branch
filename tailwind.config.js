@@ -1,7 +1,16 @@
 // tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  // 🔹 Tell Tailwind where to look for class names
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
+  ],
+
   theme: {
     extend: {
+      // 🔹 Custom animations
       keyframes: {
         'fade-in-up': {
           '0%': { opacity: 0, transform: 'translateY(20px)' },
@@ -23,4 +32,7 @@ module.exports = {
       },
     },
   },
+
+  // 🔹 Plugins if you use any (can leave empty)
+  plugins: [],
 }
