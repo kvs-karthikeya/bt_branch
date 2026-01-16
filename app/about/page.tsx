@@ -14,7 +14,7 @@ export default function AboutPage() {
               ABOUT <br />
               <span className="text-primary">US</span>
             </h1>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed">
+            <p className="text-xl text-muted-foreground font-light leading-relaxed animate-fade-in-up">
               We are defining the intersection of academic excellence and digital innovation. Our mission is to create a
               seamless interface for the modern student.
             </p>
@@ -22,9 +22,10 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Mission / Vision / Community */}
       <section className="py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-16">
-          <div className="space-y-6">
+          <div className="space-y-6 animate-fade-in-up">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
               <Target size={24} />
             </div>
@@ -34,7 +35,7 @@ export default function AboutPage() {
               knowledge.
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 animate-fade-in-up delay-150">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
               <Award size={24} />
             </div>
@@ -44,7 +45,7 @@ export default function AboutPage() {
               utility.
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 animate-fade-in-up delay-300">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
               <Users size={24} />
             </div>
@@ -56,9 +57,10 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Leadership Messages */}
       <section className="py-24 sm:py-32 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl sm:text-6xl font-light tracking-tight text-foreground mb-20">
+          <h2 className="text-4xl sm:text-6xl font-light tracking-tight text-foreground mb-20 animate-fade-in-up">
             Message from Leadership
           </h2>
 
@@ -117,34 +119,35 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Contact Section */}
       <section className="py-24 sm:py-32 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div className="space-y-8">
-              <h2 className="text-4xl font-light tracking-tight text-foreground">
+              <h2 className="text-4xl font-light tracking-tight text-foreground animate-fade-in-up">
                 Connect with the <br />
                 Department
               </h2>
-              <p className="text-muted-foreground font-light leading-relaxed max-w-md">
+              <p className="text-muted-foreground font-light leading-relaxed max-w-md animate-fade-in-up">
                 Our doors are always open for academic inquiries, collaborations, and student support.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
-              <div className="space-y-4">
+              <div className="space-y-4 animate-fade-in-up">
                 <div className="flex items-center gap-3 text-primary">
                   <Mail size={18} />
                   <span className="text-xs font-bold tracking-widest uppercase">Email</span>
                 </div>
                 <p className="text-foreground font-light">info@university-branch.edu</p>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4 animate-fade-in-up delay-150">
                 <div className="flex items-center gap-3 text-primary">
                   <Phone size={18} />
                   <span className="text-xs font-bold tracking-widest uppercase">Phone</span>
                 </div>
                 <p className="text-foreground font-light">+1 (555) 0123 4567</p>
               </div>
-              <div className="space-y-4 sm:col-span-2">
+              <div className="space-y-4 sm:col-span-2 animate-fade-in-up delay-300">
                 <div className="flex items-center gap-3 text-primary">
                   <MapPin size={18} />
                   <span className="text-xs font-bold tracking-widest uppercase">Location</span>
