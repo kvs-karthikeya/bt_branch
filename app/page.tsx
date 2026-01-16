@@ -1,9 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { useState, useEffect, useRef } from "react"
-import AOS from "aos"
-import "aos/dist/aos.css"
 import {
   BookOpen,
   Users,
@@ -17,6 +14,9 @@ import {
   ChevronRight,
   ImageIcon,
 } from "lucide-react"
+import { useState, useEffect, useRef } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0)
@@ -37,7 +37,7 @@ export default function Home() {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.muted = true
-      videoRef.current.play().catch(() => {})
+      videoRef.current.play().catch((err) => console.log("[v0] Video autoplay failed:", err))
     }
   }, [])
 
@@ -108,9 +108,8 @@ export default function Home() {
 
   return (
     <div className="space-y-0 bg-background">
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-[-1]">
+        <div className="absolute inset-0 z-0">
           <video
             ref={videoRef}
             src="/klu.mp4"
@@ -127,10 +126,11 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
           <div className="space-y-6" data-aos="fade-up">
             <h1
-              className="text-7xl sm:text-8xl lg:text-9xl font-extralight tracking-tighter text-foreground leading-none animate-fade-in-up"
+              className="text-7xl sm:text-8xl lg:text-9xl font-extralight tracking-tighter text-foreground leading-none"
               style={{ letterSpacing: "-0.04em" }}
             >
-              Department Of<br />
+              Department Of
+              <br />
               <span className="text-primary font-light">BIOTECHNOLOGY</span>
             </h1>
             <p
@@ -158,7 +158,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="relative bg-background py-32 sm:py-48 border-y border-border" ref={modulesRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
@@ -177,7 +176,7 @@ export default function Home() {
             {features.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <Link key={index} href={feature.href} className="group" data-aos="fade-up" data-aos-delay={index * 100}>
+                <Link key={index} href={feature.href} className="group">
                   <div className="relative h-full bg-secondary/50 backdrop-blur-sm border border-border rounded-2xl p-10 hover:border-primary/50 transition-all duration-500">
                     <div className="relative z-10 flex flex-col h-full space-y-6">
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500">
@@ -201,8 +200,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Recruiters Section */}
-      <section className="relative bg-background py-32 border-b border-border overflow-hidden">
+      <section className="relative bg-background py-32 border-y border-border overflow-hidden" id="recruiters-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
           <div className="space-y-4" data-aos="fade-up">
             <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-foreground">Our Recruiters</h2>
@@ -234,8 +232,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Socials Section */}
-      <section className="relative bg-background py-32 border-b border-border">
+      <section className="relative bg-background py-32 border-b border-border" id="socials-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
           <div className="space-y-4" data-aos="fade-up">
             <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-foreground">Follow Department</h2>
@@ -254,9 +251,8 @@ export default function Home() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-full border border-border text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-500 group"
+                  className="p-4 rounded-full border border-border text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-500"
                   title={social.label}
-                  data-aos="fade-up"
                 >
                   <Icon size={24} strokeWidth={1.5} />
                 </a>
