@@ -17,10 +17,28 @@ function ScrollToTop() {
   return null
 }
 
+function AOSInitializer() {
+  useEffect(() => {
+    const loadAOS = async () => {
+      const AOS = await import("aos")
+      AOS.init({
+        duration: 600,
+        easing: "ease-out",
+        once: true,
+        offset: 100,
+      })
+    }
+    loadAOS()
+  }, [])
+
+  return null
+}
+
 export default function ClientRoot({ children }: { children: React.ReactNode }) {
   return (
     <>
       <ScrollToTop />
+      <AOSInitializer />
       <Navigation />
       <main className="min-h-screen">{children}</main>
       <Footer />
