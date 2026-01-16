@@ -11,12 +11,12 @@ export default function AboutPage() {
       <section className="relative py-32 border-b border-border overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-6">
-            <h1 className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none">
+          <div className="max-w-3xl space-y-6 animate-fade-in-up">
+            <h1 className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none animate-fade-in-up">
               ABOUT <br />
               <span className="text-primary">US</span>
             </h1>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed">
+            <p className="text-xl text-muted-foreground font-light leading-relaxed animate-fade-in-up">
               We are defining the intersection of academic excellence and digital innovation. Our mission is to create a
               seamless interface for the modern student.
             </p>
