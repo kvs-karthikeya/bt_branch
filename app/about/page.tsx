@@ -12,7 +12,7 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-6 animate-fade-in-up">
-            <h1 className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none animate-fade-in-up">
+            <h1 className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none animate-fade-in">
               ABOUT <br />
               <span className="text-primary">US</span>
             </h1>
