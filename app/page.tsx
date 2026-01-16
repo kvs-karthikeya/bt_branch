@@ -113,7 +113,7 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
           <div className="space-y-6">
             <h1
-              className="text-7xl sm:text-8xl lg:text-9xl font-extralight tracking-tighter text-foreground leading-none"
+              className="text-7xl sm:text-8xl lg:text-9xl font-extralight tracking-tighter text-foreground leading-none animate-fade-in-up"
               style={{ letterSpacing: "-0.04em" }}
             >
               Department Of<br />
