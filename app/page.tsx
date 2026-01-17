@@ -6,7 +6,6 @@ import {
   Users,
   Users2,
   Instagram,
-  Twitter,
   Linkedin,
   Youtube,
   Globe,
@@ -100,7 +99,6 @@ export default function Home() {
 
   const departmentSocials = [
     { icon: Instagram, href: "https://www.instagram.com/kl_zenbiotech", label: "Instagram" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
     { icon: Globe, href: "https://department.university.edu", label: "Website" },
