@@ -76,6 +76,7 @@ export default function CommunityPage() {
     </h1>
     <p
       data-aos="fade-up"
+      data-aos-delay="150"
       className="text-muted-foreground">
       Join your batch WhatsApp groups to stay connected with peers and receive official updates
     </p>
