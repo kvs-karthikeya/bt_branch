@@ -99,7 +99,7 @@ export default function Home() {
   ]
 
   const departmentSocials = [
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/kl_zenbiotech", label: "Instagram" },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
