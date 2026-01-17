@@ -147,19 +147,16 @@ export default function AlumniPage() {
       <DNAStrand />
 
       {/* Header */}
-      <div
-        className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border"
-        data-aos="fade-down"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-light text-foreground mb-2">
-            Alumni Network
-          </h1>
-          <p className="text-muted-foreground">
-            Connect with our successful alumni and explore career opportunities
-          </p>
-        </div>
-      </div>
+<div className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 className="text-4xl font-light text-foreground mb-2 animate-fade-in-up">
+      Alumni Network
+    </h1>
+    <p className="text-muted-foreground">
+      Connect with our successful alumni and explore career opportunities
+    </p>
+  </div>
+</div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Testimonials Slideshow */}
