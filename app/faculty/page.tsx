@@ -154,17 +154,27 @@ export default function FacultyPage() {
       <DNAStrand />
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-light text-foreground mb-2" data-aos="fade-up">
-            Faculty Directory
-          </h1>
-          <p className="text-muted-foreground" data-aos="fade-up" data-aos-delay="150">
-            Connect with our experienced faculty members and find their office hours
-          </p>
-        </div>
-      </div>
-
+      <section className="relative py-32 border-b border-border overflow-hidden">
+  <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full"></div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="max-w-3xl space-y-6">
+      <h1
+        data-aos="fade-up"
+        className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none"
+      >
+        FACULTY <br />
+        <span className="text-primary">DIRECTORY</span>
+      </h1>
+      <p
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="text-xl text-muted-foreground font-light leading-relaxed"
+      >
+        Connect with our experienced faculty members and find their office hours.
+      </p>
+    </div>
+  </div>
+</section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8" data-aos="fade-up">
           <div className="relative max-w-3xl mx-auto">
