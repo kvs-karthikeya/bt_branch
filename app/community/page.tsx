@@ -1,7 +1,10 @@
 "use client"
 
 import type React from "react"
+import { useEffect } from "react"
 import { MessageCircle, Users } from "lucide-react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 interface CommunityGroup {
   id: string
@@ -53,12 +56,25 @@ const communityGroups: CommunityGroup[] = [
 ]
 
 export default function CommunityPage() {
+  useEffect(() => {
+    AOS.init({
+      once: false,
+      duration: 800,
+      easing: "ease-out-cubic",
+    })
+  }, [])
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary/20 to-accent/20 border-b-2 border-primary">
+      <div
+        className="bg-gradient-to-r from-primary/20 to-accent/20 border-b-2 border-primary"
+        data-aos="fade-down"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-light text-foreground mb-2 animate-fade-in-up">Community Groups</h1>
+          <h1 className="text-4xl font-light text-foreground mb-2">
+            Community Groups
+          </h1>
           <p className="text-muted-foreground">
             Join your batch WhatsApp groups to stay connected with peers and receive official updates
           </p>
@@ -67,14 +83,16 @@ export default function CommunityPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Y24 Section */}
-        <div className="mb-16">
+        <div className="mb-16" data-aos="fade-up">
           <h2 className="text-3xl font-bold text-foreground mb-8">Year 2024 (Y24)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {communityGroups
               .filter((g) => g.batch === "Y24")
-              .map((group) => (
+              .map((group, index) => (
                 <div
                   key={group.id}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                   className="bg-card border-2 border-primary rounded-lg p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -109,14 +127,16 @@ export default function CommunityPage() {
         </div>
 
         {/* Y25 Section */}
-        <div>
+        <div data-aos="fade-up">
           <h2 className="text-3xl font-bold text-foreground mb-8">Year 2025 (Y25)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {communityGroups
               .filter((g) => g.batch === "Y25")
-              .map((group) => (
+              .map((group, index) => (
                 <div
                   key={group.id}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                   className="bg-card border-2 border-primary rounded-lg p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
