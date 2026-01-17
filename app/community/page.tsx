@@ -67,21 +67,27 @@ export default function CommunityPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-<div className="bg-gradient-to-r from-primary/20 to-accent/20 border-b-2 border-primary">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h1 
-      data-aos="fade-up"
-      className="text-4xl font-light text-foreground mb-2 animate-fade-in-up">
-      Community Groups
-    </h1>
-    <p
-      data-aos="fade-up"
-      data-aos-delay="150"
-      className="text-muted-foreground">
-      Join your batch WhatsApp groups to stay connected with peers and receive official updates
-    </p>
+<section className="relative py-32 border-b border-border overflow-hidden">
+  <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full"></div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="max-w-3xl space-y-6">
+      <h1
+        data-aos="fade-up"
+        className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none"
+      >
+        COMMUNITY <br />
+        <span className="text-primary">GROUPS</span>
+      </h1>
+      <p
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="text-xl text-muted-foreground font-light leading-relaxed"
+      >
+        Join your batch WhatsApp groups to stay connected with peers and receive official updates.
+      </p>
+    </div>
   </div>
-</div>
+</section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Y24 Section */}
@@ -93,7 +99,7 @@ export default function CommunityPage() {
               .map((group, index) => (
                 <div
                   key={group.id}
-                  data-aos="zoom-in"
+                  data-aos="fade-up"
                   data-aos-delay={index * 100}
                   className="bg-card border-2 border-primary rounded-lg p-8 hover:shadow-lg transition-all duration-300"
                 >
