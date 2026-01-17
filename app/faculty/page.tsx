@@ -170,7 +170,7 @@ export default function FacultyPage() {
         data-aos-delay="200"
         className="text-xl text-muted-foreground font-light leading-relaxed"
       >
-        Connect with our experienced faculty members and find their office hours.
+        Connect with our experienced faculty members and explore their academic expertise.
       </p>
     </div>
   </div>
