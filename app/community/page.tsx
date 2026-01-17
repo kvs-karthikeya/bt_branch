@@ -40,7 +40,7 @@ const communityGroups: CommunityGroup[] = [
     batch: "Y25",
     type: "students",
     description: "Connect with your batch mates, share notes, and collaborate on projects",
-    members: 520,
+    members: 129,
     whatsappLink: "https://chat.whatsapp.com/C7xWRxX39xNAqFHiaodZq8",
     icon: <Users className="w-8 h-8" />,
   },
