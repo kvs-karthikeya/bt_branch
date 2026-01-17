@@ -78,12 +78,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-light">
+                <a href="https://www.linkedin.com/in/biotechnology-department-600111221" className="text-muted-foreground hover:text-primary transition-colors font-light">
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-light">
+                <a href="https://www.instagram.com/kl_zenbiotech" className="text-muted-foreground hover:text-primary transition-colors font-light">
                   Instagram
                 </a>
               </li>
