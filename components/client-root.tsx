@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect } from "react"
 import { usePathname } from "next/navigation"
 import Navigation from "@/components/navigation"
@@ -35,13 +34,16 @@ function AOSInitializer() {
 }
 
 export default function ClientRoot({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  const hideFooter = pathname === "/about"
+
   return (
     <>
       <ScrollToTop />
       <AOSInitializer />
       <Navigation />
       <main className="min-h-screen">{children}</main>
-      <Footer />
+      {!hideFooter && <Footer />}
     </>
   )
 }
