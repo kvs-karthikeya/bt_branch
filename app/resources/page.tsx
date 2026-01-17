@@ -11,8 +11,8 @@ export default function ResourcesPage() {
     { label: "4th Year", link: "https://your-4th-year-link.com" },
   ]
   const timetables = [
-  { label: "1st Year", link: "https://www.notion.so/1st-Year-2ce4d94886d9805f802df7218097b20a" },
-  { label: "2nd Year", link: "https://your-2nd-year-timetable-link.com" },
+  { label: "1st Year", link: "https://your-1st-year-timetable-link.com" },
+  { label: "2nd Year", link: "https://www.notion.so/2nd-YEAR-TIMETABLE-2e84d94886d980f08610f94b3c884393" },
   { label: "3rd Year", link: "https://your-3rd-year-timetable-link.com" },
   { label: "4th Year", link: "https://your-4th-year-timetable-link.com" },
 ]
