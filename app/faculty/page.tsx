@@ -1,8 +1,10 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { Search, Mail, Phone, Clock, Linkedin } from "lucide-react"
 import DNAStrand from "@/components/dna-strand"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 interface Faculty {
   id: string
@@ -133,6 +135,10 @@ const mockFaculty: Faculty[] = [
 export default function FacultyPage() {
   const [searchQuery, setSearchQuery] = useState("")
 
+  useEffect(() => {
+    AOS.init({ duration: 900, once: true })
+  }, [])
+
   const filteredFaculty = useMemo(() => {
     return mockFaculty.filter((faculty) => {
       const matchesSearch =
@@ -150,17 +156,17 @@ export default function FacultyPage() {
       {/* Header */}
       <div className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-light text-foreground mb-2 animate-fade-in-up" data-aos="fade-up">
+          <h1 className="text-4xl font-light text-foreground mb-2" data-aos="fade-up">
             Faculty Directory
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground" data-aos="fade-up" data-aos-delay="150">
             Connect with our experienced faculty members and find their office hours
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-8">
+        <div className="mb-8" data-aos="fade-up">
           <div className="relative max-w-3xl mx-auto">
             <Search className="absolute left-3 top-3 text-muted-foreground" size={20} />
             <input
@@ -175,9 +181,11 @@ export default function FacultyPage() {
 
         {/* Faculty Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredFaculty.map((faculty) => (
+          {filteredFaculty.map((faculty, index) => (
             <div
               key={faculty.id}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
             >
               {/* Image */}
@@ -253,7 +261,7 @@ export default function FacultyPage() {
         </div>
 
         {filteredFaculty.length === 0 && (
-          <div className="text-center py-12">
+          <div className="text-center py-12" data-aos="fade-up">
             <p className="text-muted-foreground text-lg">No faculty members found matching your criteria.</p>
           </div>
         )}
