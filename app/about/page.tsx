@@ -163,7 +163,7 @@ export default function AboutPage() {
                   <MapPin size={18} />
                   <span className="text-xs font-bold tracking-widest uppercase">Location</span>
                 </div>
-                <p className="text-foreground font-light">Suite 404, Academic Block A, University Campus</p>
+                <p className="text-foreground font-light">KL University, Green fields, Vaddeswaram, Andhra Pradesh, India, 522501</p>
               </div>
             </div>
           </div>
