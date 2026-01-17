@@ -67,19 +67,16 @@ export default function CommunityPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div
-        className="bg-gradient-to-r from-primary/20 to-accent/20 border-b-2 border-primary"
-        data-aos="fade-down"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-light text-foreground mb-2">
-            Community Groups
-          </h1>
-          <p className="text-muted-foreground">
-            Join your batch WhatsApp groups to stay connected with peers and receive official updates
-          </p>
-        </div>
-      </div>
+<div className="bg-gradient-to-r from-primary/20 to-accent/20 border-b-2 border-primary">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 className="text-4xl font-light text-foreground mb-2 animate-fade-in-up">
+      Community Groups
+    </h1>
+    <p className="text-muted-foreground">
+      Join your batch WhatsApp groups to stay connected with peers and receive official updates
+    </p>
+  </div>
+</div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Y24 Section */}
