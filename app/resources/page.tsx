@@ -12,7 +12,7 @@ export default function ResourcesPage() {
   ]
 
   const SubsectionHeader = ({ icon: Icon, title, description }: any) => (
-    <div className="flex items-center gap-4 mb-10">
+    <div className="flex items-center gap-4 mb-10" data-aos="fade-up">
       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
         <Icon size={28} strokeWidth={1.5} />
       </div>
@@ -28,6 +28,8 @@ export default function ResourcesPage() {
       {items.map((year: any, index: number) => (
         <div
           key={index}
+          data-aos="zoom-in"
+          data-aos-delay={index * 150}
           className="group relative bg-secondary/30 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-500 overflow-hidden"
         >
           <div className="relative z-10 space-y-6">
@@ -52,17 +54,19 @@ export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-background relative">
       <DNAStrand />
+
       <div className="relative py-24 border-b border-border bg-gradient-to-b from-primary/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6 animate-fade-in-up">
+          <h1 className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6" data-aos="fade-up">
             Academic <span className="text-primary font-light italic">Intelligence</span>
           </h1>
-          <p className="text-muted-foreground uppercase tracking-[0.3em] font-bold text-xs">Knowledge Repository</p>
+          <p className="text-muted-foreground uppercase tracking-[0.3em] font-bold text-xs" data-aos="fade-up" data-aos-delay="200">
+            Knowledge Repository
+          </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-32">
-        {/* Notes Subsection */}
         <section>
           <SubsectionHeader
             icon={BookOpen}
@@ -72,8 +76,7 @@ export default function ResourcesPage() {
           <YearGrid items={years} />
         </section>
 
-        {/* Podcasts Subsection */}
-        <section className="bg-secondary/20 border border-border rounded-3xl p-12 text-center space-y-8">
+        <section className="bg-secondary/20 border border-border rounded-3xl p-12 text-center space-y-8" data-aos="fade-up">
           <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mx-auto">
             <Headphones size={32} strokeWidth={1.5} />
           </div>
@@ -93,7 +96,6 @@ export default function ResourcesPage() {
           </a>
         </section>
 
-        {/* Time Table Subsection */}
         <section>
           <SubsectionHeader
             icon={Calendar}
@@ -106,4 +108,3 @@ export default function ResourcesPage() {
     </div>
   )
 }
-
