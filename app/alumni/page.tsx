@@ -155,7 +155,9 @@ export default function AlumniPage() {
 >
       Alumni Network
     </h1>
-    <p className="text-muted-foreground">
+    <p
+      data-aos="fade-up"
+      className="text-muted-foreground">
       Connect with our successful alumni and explore career opportunities
     </p>
   </div>
