@@ -163,7 +163,7 @@ export default function FacultyPage() {
         className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none"
       >
         FACULTY <br />
-        <span className="text-primary">DIRECTORY</span>
+        <span className="text-primary italic">DIRECTORY</span>
       </h1>
       <p
         data-aos="fade-up"
