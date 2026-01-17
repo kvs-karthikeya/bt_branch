@@ -76,7 +76,7 @@ export default function CommunityPage() {
         className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none"
       >
         COMMUNITY <br />
-        <span className="text-primary">GROUPS</span>
+        <span className="text-primary italic">Groups</span>
       </h1>
       <p
         data-aos="fade-up"
