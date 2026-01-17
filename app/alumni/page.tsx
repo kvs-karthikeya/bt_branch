@@ -1,275 +1,338 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Search, Briefcase, MapPin, Mail, Phone, ChevronLeft, ChevronRight } from "lucide-react"
+import { Users, Calendar, Award, ChevronLeft, ChevronRight } from "lucide-react"
 import DNAStrand from "@/components/dna-strand"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
-interface AlumniMember {
+interface Member {
   id: string
   name: string
-  batch: string
-  company: string
-  position: string
-  location: string
-  email: string
-  phone: string
+  role: string
   image: string
-  linkedIn?: string
 }
 
-const mockAlumni: AlumniMember[] = [
+interface Event {
+  id: string
+  title: string
+  date: string
+  description: string
+  attendees: number
+  image: string
+}
+
+const clubMembers: Member[] = [
+  { id: "1", name: "Arjun Sharma", role: "President", image: "/male-student.jpg" },
+  { id: "2", name: "Priya Patel", role: "Vice President", image: "/female-student.jpg" },
+  { id: "3", name: "Rohan Singh", role: "Treasurer", image: "/male-student.jpg" },
+  { id: "4", name: "Anjali Verma", role: "Secretary", image: "/female-student.jpg" },
+  { id: "5", name: "Vikram Kumar", role: "Event Coordinator", image: "/male-student.jpg" },
+  { id: "6", name: "Neha Gupta", role: "Event Coordinator", image: "/female-student.jpg" },
+]
+
+const upcomingEvents: Event[] = [
   {
     id: "1",
-    name: "Rajesh Kumar",
-    batch: "2020",
-    company: "Google",
-    position: "Senior Software Engineer",
-    location: "Bangalore, India",
-    email: "rajesh.kumar@google.com",
-    phone: "+91-9876543210",
-    image: "/male-student.jpg",
-    linkedIn: "linkedin.com/in/rajesh-kumar",
+    title: "Tech Fest 2025",
+    date: "2025-11-15",
+    description: "Annual technology festival featuring competitions, workshops, and networking opportunities.",
+    attendees: 500,
+    image: "/tech-conference.jpg",
   },
   {
     id: "2",
-    name: "Priya Sharma",
-    batch: "2021",
-    company: "Microsoft",
-    position: "Product Manager",
-    location: "Hyderabad, India",
-    email: "priya.sharma@microsoft.com",
-    phone: "+91-9876543211",
-    image: "/female-student.jpg",
-    linkedIn: "linkedin.com/in/priya-sharma",
+    title: "Hackathon Challenge",
+    date: "2025-11-22",
+    description: "24-hour hackathon with exciting prizes and mentorship from industry experts.",
+    attendees: 200,
+    image: "/hackathon-event.png",
   },
   {
     id: "3",
-    name: "Vikram Singh",
-    batch: "2019",
-    company: "Amazon",
-    position: "Data Scientist",
-    location: "Pune, India",
-    email: "vikram.singh@amazon.com",
-    phone: "+91-9876543212",
-    image: "/male-student.jpg",
-    linkedIn: "linkedin.com/in/vikram-singh",
+    title: "Web Development Workshop",
+    date: "2025-12-01",
+    description: "Learn modern web development frameworks and best practices from experienced developers.",
+    attendees: 150,
+    image: "/web-development.jpg",
   },
   {
     id: "4",
-    name: "Anjali Verma",
-    batch: "2020",
-    company: "Startup Founder",
-    position: "CEO",
-    location: "Mumbai, India",
-    email: "anjali@startup.com",
-    phone: "+91-9876543213",
-    image: "/female-student.jpg",
-    linkedIn: "linkedin.com/in/anjali-verma",
+    title: "AI & ML Bootcamp",
+    date: "2025-12-10",
+    description: "Intensive bootcamp on artificial intelligence and machine learning applications.",
+    attendees: 180,
+    image: "/ai-conference.jpg",
   },
   {
     id: "5",
-    name: "Amit Patel",
-    batch: "2018",
-    company: "IBM",
-    position: "Cloud Architect",
-    location: "Delhi, India",
-    email: "amit.patel@ibm.com",
-    phone: "+91-9876543214",
-    image: "/male-student.jpg",
-    linkedIn: "linkedin.com/in/amit-patel",
-  },
-  {
-    id: "6",
-    name: "Neha Gupta",
-    batch: "2021",
-    company: "Accenture",
-    position: "Consultant",
-    location: "Bangalore, India",
-    email: "neha.gupta@accenture.com",
-    phone: "+91-9876543215",
-    image: "/female-student.jpg",
-    linkedIn: "linkedin.com/in/neha-gupta",
+    title: "Cloud Computing Summit",
+    date: "2025-12-20",
+    description: "Explore cloud technologies and best practices with industry leaders.",
+    attendees: 220,
+    image: "/cloud-computing.jpg",
   },
 ]
 
-const testimonials = [
+const pastEvents: Event[] = [
   {
-    text: "My time at the university prepared me for the global tech landscape.",
-    author: "Rajesh Kumar",
-    role: "Google",
+    id: "1",
+    title: "AI & Machine Learning Seminar",
+    date: "2025-09-20",
+    description: "Comprehensive seminar on AI and ML applications in real-world scenarios.",
+    attendees: 300,
+    image: "/ai-conference.jpg",
   },
-  { text: "The community here is supportive and highly innovative.", author: "Priya Sharma", role: "Microsoft" },
-  { text: "Excellent infrastructure and faculty mentorship.", author: "Vikram Singh", role: "Amazon" },
+  {
+    id: "2",
+    title: "Cloud Computing Workshop",
+    date: "2025-08-15",
+    description: "Hands-on workshop covering AWS, Azure, and Google Cloud platforms.",
+    attendees: 250,
+    image: "/cloud-computing.jpg",
+  },
+  {
+    id: "3",
+    title: "Cybersecurity Awareness",
+    date: "2025-07-10",
+    description: "Educational session on cybersecurity best practices and threat prevention.",
+    attendees: 200,
+    image: "/cybersecurity-network.png",
+  },
 ]
 
-export default function AlumniPage() {
-  const [searchQuery, setSearchQuery] = useState("")
-  const [selectedBatch, setSelectedBatch] = useState<string>("all")
-  const [alumni] = useState<AlumniMember[]>(mockAlumni)
-  const [testimonyIndex, setTestimonyIndex] = useState(0)
+export default function BOLTPage() {
+  const [activeTab, setActiveTab] = useState<"upcoming" | "past">("upcoming")
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+
+  const allEventImages = [...upcomingEvents, ...pastEvents]
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-out-cubic",
+    })
+    AOS.refresh()
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTestimonyIndex((prev) => (prev + 1) % testimonials.length)
-    }, 6000)
+      setCurrentSlideIndex((prev) => (prev + 1) % allEventImages.length)
+    }, 5000)
+
     return () => clearInterval(interval)
-  }, [])
-
-  const batches = [
-    "all",
-    ...Array.from(new Set(alumni.map((a) => a.batch)))
-      .sort()
-      .reverse(),
-  ]
-
-  const filteredAlumni = alumni.filter((member) => {
-    const matchesSearch =
-      member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      member.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      member.position.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesBatch = selectedBatch === "all" || member.batch === selectedBatch
-
-    return matchesSearch && matchesBatch
-  })
+  }, [allEventImages.length])
 
   return (
     <div className="min-h-screen bg-background relative">
       <DNAStrand />
 
-      {/* Header */}
-      <div className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-light text-foreground mb-2 animate-fade-in-up">Alumni Network</h1>
-          <p className="text-muted-foreground">Connect with our successful alumni and explore career opportunities</p>
+      {/* Hero Section */}
+      <div className="bg-white border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h1
+            className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6"
+            data-aos="fade-up"
+          >
+            BOLT <span className="text-primary italic">Club</span>
+          </h1>
+          <p
+            className="text-lg text-muted-foreground max-w-2xl leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            Building Opportunities for Learning and Technology - A vibrant community of tech enthusiasts, innovators,
+            and learners dedicated to advancing technology and fostering collaboration.
+          </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Testimonials Slideshow */}
-        <div className="mb-16 relative bg-secondary/30 border border-border rounded-2xl p-10 text-center overflow-hidden">
-          <div className="relative z-10 transition-all duration-700">
-            <p className="text-2xl font-light italic text-foreground leading-relaxed mb-6">
-              "{testimonials[testimonyIndex].text}"
-            </p>
-            <div className="space-y-1">
-              <p className="font-bold text-primary">{testimonials[testimonyIndex].author}</p>
-              <p className="text-sm text-muted-foreground uppercase tracking-widest">
-                {testimonials[testimonyIndex].role}
-              </p>
-            </div>
-          </div>
-
-          <div className="absolute inset-y-0 left-4 flex items-center">
-            <button
-              onClick={() => setTestimonyIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-              className="p-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <ChevronLeft size={24} />
-            </button>
-          </div>
-          <div className="absolute inset-y-0 right-4 flex items-center">
-            <button
-              onClick={() => setTestimonyIndex((prev) => (prev + 1) % testimonials.length)}
-              className="p-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
-        </div>
-
-        {/* Search and Filter */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="md:col-span-2">
-            <div className="relative">
-              <Search className="absolute left-3 top-3 text-muted-foreground" size={20} />
-              <input
-                type="text"
-                placeholder="Search by name, company, or position..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border-2 border-primary rounded-lg bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Event Gallery */}
+        <section className="mb-20" data-aos="fade-up">
+          <h2 className="text-4xl font-extralight tracking-tight text-foreground mb-10">Event Gallery</h2>
+          <div className="relative bg-white border border-border rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/5">
+            <div className="relative h-[600px] bg-secondary flex items-center justify-center">
+              <img
+                src={allEventImages[currentSlideIndex].image || "/placeholder.svg"}
+                alt={allEventImages[currentSlideIndex].title}
+                className="w-full h-full object-cover transition-transform duration-700 scale-105"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent flex flex-col justify-end p-12">
+                <h3 className="text-4xl font-light text-foreground mb-4">
+                  {allEventImages[currentSlideIndex].title}
+                </h3>
+                <p className="text-foreground/60 text-lg max-w-2xl font-light">
+                  {allEventImages[currentSlideIndex].description}
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div>
-            <select
-              value={selectedBatch}
-              onChange={(e) => setSelectedBatch(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-primary rounded-lg bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-            >
-              {batches.map((batch) => (
-                <option key={batch} value={batch}>
-                  {batch === "all" ? "All Batches" : `Batch ${batch}`}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+            {/* Slideshow Controls */}
+            <div className="absolute inset-0 flex items-center justify-between px-8 pointer-events-none">
+              <button
+                onClick={() =>
+                  setCurrentSlideIndex((prev) => (prev - 1 + allEventImages.length) % allEventImages.length)
+                }
+                className="pointer-events-auto p-4 rounded-full bg-white/90 hover:bg-primary text-foreground hover:text-white shadow-xl transition-all hover:scale-110 border border-border/50"
+              >
+                <ChevronLeft size={32} />
+              </button>
+              <button
+                onClick={() => setCurrentSlideIndex((prev) => (prev + 1) % allEventImages.length)}
+                className="pointer-events-auto p-4 rounded-full bg-white/90 hover:bg-primary text-foreground hover:text-white shadow-xl transition-all hover:scale-110 border border-border/50"
+              >
+                <ChevronRight size={32} />
+              </button>
+            </div>
 
-        {/* Alumni Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredAlumni.map((member) => (
-            <div
-              key={member.id}
-              className="bg-card border-2 border-primary rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-            >
-              {/* Image */}
-              <div className="h-48 bg-secondary flex items-center justify-center overflow-hidden">
-                <img
-                  src={member.image || "/placeholder.svg"}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
+            {/* Slide Indicators */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
+              {allEventImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlideIndex(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentSlideIndex ? "bg-primary w-10" : "bg-white/60 w-2 hover:bg-white/80"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                <p className="text-sm text-primary font-semibold mb-3">Batch {member.batch}</p>
-
-                <div className="space-y-3 mb-4">
-                  <div className="flex items-start gap-2">
-                    <Briefcase size={16} className="text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{member.position}</p>
-                      <p className="text-xs text-muted-foreground">{member.company}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <MapPin size={16} className="text-primary flex-shrink-0" />
-                    {member.location}
-                  </div>
-                </div>
-
-                {/* Contact Actions */}
-                <div className="space-y-2">
-                  <a
-                    href={`mailto:${member.email}`}
-                    className="flex items-center gap-2 px-3 py-2 bg-primary text-primary-foreground rounded-lg hover:shadow-lg transition-shadow text-sm font-medium"
-                  >
-                    <Mail size={16} />
-                    Email
-                  </a>
-                  <a
-                    href={`tel:${member.phone}`}
-                    className="flex items-center gap-2 px-3 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors text-sm font-medium"
-                  >
-                    <Phone size={16} />
-                    Call
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+        </section>
+
+        {/* Club Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+          <div
+            data-aos="zoom-in"
+            className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all"
+          >
+            <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+            <div className="text-4xl font-bold text-foreground mb-2">150+</div>
+            <div className="text-muted-foreground">Active Members</div>
+          </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all"
+          >
+            <Calendar className="w-12 h-12 text-primary mx-auto mb-4" />
+            <div className="text-4xl font-bold text-foreground mb-2">25+</div>
+            <div className="text-muted-foreground">Events Annually</div>
+          </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all"
+          >
+            <Award className="w-12 h-12 text-primary mx-auto mb-4" />
+            <div className="text-4xl font-bold text-foreground mb-2">15+</div>
+            <div className="text-muted-foreground">Awards Won</div>
+          </div>
         </div>
 
-        {filteredAlumni.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground text-lg">No alumni found matching your criteria.</p>
+        {/* Club Leadership */}
+        <section className="mb-20">
+          <h2 className="text-4xl font-bold text-foreground mb-10" data-aos="fade-up">
+            Club Leadership
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clubMembers.map((member, index) => (
+              <div
+                key={member.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary hover:shadow-lg transition-all"
+              >
+                <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-semibold text-foreground mb-1">{member.name}</h3>
+                  <p className="text-sm text-primary font-medium">{member.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        )}
+        </section>
+
+        {/* Events Section */}
+        <section>
+          <h2 className="text-4xl font-bold text-foreground mb-10" data-aos="fade-up">
+            Events
+          </h2>
+
+          {/* Tab Navigation */}
+          <div className="flex gap-6 mb-10 border-b border-border" data-aos="fade-up">
+            <button
+              onClick={() => setActiveTab("upcoming")}
+              className={`px-8 py-4 font-semibold border-b-2 transition-all ${
+                activeTab === "upcoming"
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Upcoming Events
+            </button>
+            <button
+              onClick={() => setActiveTab("past")}
+              className={`px-8 py-4 font-semibold border-b-2 transition-all ${
+                activeTab === "past"
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Past Events
+            </button>
+          </div>
+
+          {/* Events Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {(activeTab === "upcoming" ? upcomingEvents : pastEvents).map((event, index) => (
+              <div
+                key={event.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary hover:shadow-lg transition-all"
+              >
+                <div className="h-52 bg-secondary flex items-center justify-center overflow-hidden">
+                  <img
+                    src={event.image || "/placeholder.svg"}
+                    alt={event.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                    <Calendar size={16} />
+                    {new Date(event.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{event.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-5">{event.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground flex items-center gap-1">
+                      <Users size={16} />
+                      {event.attendees} attendees
+                    </span>
+                    <button className="px-5 py-2.5 bg-primary text-primary-foreground rounded-full hover:shadow-lg hover:scale-105 transition-all font-medium text-sm">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   )
