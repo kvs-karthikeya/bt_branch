@@ -143,7 +143,7 @@ export default function CommunityPage() {
               .map((group, index) => (
                 <div
                   key={group.id}
-                  data-aos="zoom-in"
+                  data-aos="fade-up"
                   data-aos-delay={index * 100}
                   className="bg-card border-2 border-primary rounded-lg p-8 hover:shadow-lg transition-all duration-300"
                 >
