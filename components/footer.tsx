@@ -56,7 +56,7 @@ export default function Footer() {
                 <Phone size={16} className="text-primary" />
                 <span>+1 (555) 123-4567</span>
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground font-light">
+              <li className="flex items-start gap-3 text-muted-foreground font-light">
                 <MapPin size={37} className="text-primary" />
                 <span>KL University, Green fields, Vaddeswaram, Andhra Pradesh, India, 522501</span>
               </li>
