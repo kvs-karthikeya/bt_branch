@@ -156,7 +156,7 @@ export default function AlumniPage() {
         className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none"
       >
         ALUMNI <br />
-        <span className="text-primary italic">Network</span>
+        <span className="text-primary italic">NETWORK</span>
       </h1>
       <p
         data-aos="fade-up"
