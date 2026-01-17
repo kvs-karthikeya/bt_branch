@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react"
 import { Users, Calendar, Award, ChevronLeft, ChevronRight } from "lucide-react"
 import DNAStrand from "@/components/dna-strand"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 interface Member {
   id: string
@@ -106,20 +108,20 @@ export default function BOLTPage() {
   const allEventImages = [...upcomingEvents, ...pastEvents]
 
   useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-out-cubic",
+    })
+  }, [])
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlideIndex((prev) => (prev + 1) % allEventImages.length)
     }, 5000)
 
     return () => clearInterval(interval)
   }, [allEventImages.length])
-
-  const nextSlide = () => {
-    setCurrentSlideIndex((prev) => (prev + 1) % allEventImages.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlideIndex((prev) => (prev - 1 + allEventImages.length) % allEventImages.length)
-  }
 
   return (
     <div className="min-h-screen bg-background relative">
@@ -128,10 +130,17 @@ export default function BOLTPage() {
       {/* Hero Section */}
       <div className="bg-white border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6 animate-fade-in-up">
+          <h1
+            className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6"
+            data-aos="fade-up"
+          >
             BOLT <span className="text-primary italic">Club</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+          <p
+            className="text-lg text-muted-foreground max-w-2xl leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             Building Opportunities for Learning and Technology - A vibrant community of tech enthusiasts, innovators,
             and learners dedicated to advancing technology and fostering collaboration.
           </p>
@@ -140,7 +149,7 @@ export default function BOLTPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Event Gallery */}
-        <section className="mb-20">
+        <section className="mb-20" data-aos="fade-up">
           <h2 className="text-4xl font-extralight tracking-tight text-foreground mb-10">Event Gallery</h2>
           <div className="relative bg-white border border-border rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/5">
             <div className="relative h-[600px] bg-secondary flex items-center justify-center">
@@ -150,14 +159,16 @@ export default function BOLTPage() {
                 className="w-full h-full object-cover transition-transform duration-700 scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent flex flex-col justify-end p-12">
-                <h3 className="text-4xl font-light text-foreground mb-4">{allEventImages[currentSlideIndex].title}</h3>
+                <h3 className="text-4xl font-light text-foreground mb-4">
+                  {allEventImages[currentSlideIndex].title}
+                </h3>
                 <p className="text-foreground/60 text-lg max-w-2xl font-light">
                   {allEventImages[currentSlideIndex].description}
                 </p>
               </div>
             </div>
 
-            {/* Slideshow Controls with Green Accents */}
+            {/* Slideshow Controls */}
             <div className="absolute inset-0 flex items-center justify-between px-8 pointer-events-none">
               <button
                 onClick={() =>
@@ -193,17 +204,17 @@ export default function BOLTPage() {
 
         {/* Club Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
-          <div className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all">
+          <div data-aos="zoom-in" className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all">
             <Users className="w-12 h-12 text-primary mx-auto mb-4" />
             <div className="text-4xl font-bold text-foreground mb-2">150+</div>
             <div className="text-muted-foreground">Active Members</div>
           </div>
-          <div className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all">
+          <div data-aos="zoom-in" data-aos-delay="100" className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all">
             <Calendar className="w-12 h-12 text-primary mx-auto mb-4" />
             <div className="text-4xl font-bold text-foreground mb-2">25+</div>
             <div className="text-muted-foreground">Events Annually</div>
           </div>
-          <div className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all">
+          <div data-aos="zoom-in" data-aos-delay="200" className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary transition-all">
             <Award className="w-12 h-12 text-primary mx-auto mb-4" />
             <div className="text-4xl font-bold text-foreground mb-2">15+</div>
             <div className="text-muted-foreground">Awards Won</div>
@@ -212,11 +223,15 @@ export default function BOLTPage() {
 
         {/* Club Leadership */}
         <section className="mb-20">
-          <h2 className="text-4xl font-bold text-foreground mb-10">Club Leadership</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-10" data-aos="fade-up">
+            Club Leadership
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {clubMembers.map((member) => (
+            {clubMembers.map((member, index) => (
               <div
                 key={member.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary hover:shadow-lg transition-all"
               >
                 <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center overflow-hidden">
@@ -237,10 +252,12 @@ export default function BOLTPage() {
 
         {/* Events Section */}
         <section>
-          <h2 className="text-4xl font-bold text-foreground mb-10">Events</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-10" data-aos="fade-up">
+            Events
+          </h2>
 
           {/* Tab Navigation */}
-          <div className="flex gap-6 mb-10 border-b border-border">
+          <div className="flex gap-6 mb-10 border-b border-border" data-aos="fade-up">
             <button
               onClick={() => setActiveTab("upcoming")}
               className={`px-8 py-4 font-semibold border-b-2 transition-all ${
@@ -265,9 +282,11 @@ export default function BOLTPage() {
 
           {/* Events Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(activeTab === "upcoming" ? upcomingEvents : pastEvents).map((event) => (
+            {(activeTab === "upcoming" ? upcomingEvents : pastEvents).map((event, index) => (
               <div
                 key={event.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary hover:shadow-lg transition-all"
               >
                 <div className="h-52 bg-secondary flex items-center justify-center overflow-hidden">
