@@ -10,6 +10,12 @@ export default function ResourcesPage() {
     { label: "3rd Year", link: "https://your-3rd-year-link.com" },
     { label: "4th Year", link: "https://your-4th-year-link.com" },
   ]
+  const timetables = [
+  { label: "1st Year", link: "https://your-1st-year-timetable-link.com" },
+  { label: "2nd Year", link: "https://your-2nd-year-timetable-link.com" },
+  { label: "3rd Year", link: "https://your-3rd-year-timetable-link.com" },
+  { label: "4th Year", link: "https://your-4th-year-timetable-link.com" },
+]
 
   const SubsectionHeader = ({ icon: Icon, title, description }: any) => (
     <div className="flex items-center gap-4 mb-10" data-aos="fade-up">
@@ -102,7 +108,7 @@ export default function ResourcesPage() {
             title="Academic Time Table"
             description="Stay synced with lecture schedules"
           />
-          <YearGrid items={years} buttonLabel="View Schedule" />
+          <YearGrid items={timetables} buttonLabel="View Schedule" />
         </section>
       </div>
     </div>
