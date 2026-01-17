@@ -157,6 +157,7 @@ export default function AlumniPage() {
     </h1>
     <p
       data-aos="fade-up"
+      data-aos-delay="150"
       className="text-muted-foreground">
       Connect with our successful alumni and explore career opportunities
     </p>
