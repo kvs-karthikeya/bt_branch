@@ -57,7 +57,7 @@ export default function Footer() {
                 <span>+1 (555) 123-4567</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground font-light">
-                <MapPin size={30} className="text-primary" />
+                <MapPin size={34} className="text-primary" />
                 <span>KL University, Green fields, Vaddeswaram, Andhra Pradesh, India, 522501</span>
               </li>
             </ul>
