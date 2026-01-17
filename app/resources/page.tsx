@@ -93,7 +93,7 @@ export default function ResourcesPage() {
             </p>
           </div>
           <a
-            href="https://your-podcast-link.com"
+            href="https://www.notion.so/Podcasts-2e84d94886d9804fbfbac746ccdb3efd"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-primary text-primary-foreground font-bold uppercase tracking-widest text-xs hover:shadow-lg transition-all"
