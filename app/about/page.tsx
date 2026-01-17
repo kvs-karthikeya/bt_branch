@@ -22,7 +22,7 @@ export default function AboutPage() {
               className="text-6xl sm:text-8xl font-extralight tracking-tighter text-foreground leading-none"
             >
               ABOUT <br />
-              <span className="text-primary">US</span>
+              <span className="text-primary italic">US</span>
             </h1>
             <p
               data-aos="fade-up"
