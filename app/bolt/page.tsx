@@ -134,7 +134,7 @@ export default function BOLTPage() {
             className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6"
             data-aos="fade-up"
           >
-            BOLT <span className="text-primary italic">Club</span>
+            BOLT <span className="text-primary italic">CLUB</span>
           </h1>
           <p
             className="text-lg text-muted-foreground max-w-2xl leading-relaxed"
