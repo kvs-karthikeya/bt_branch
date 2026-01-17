@@ -240,7 +240,7 @@ export default function AlumniPage() {
           {filteredAlumni.map((member, index) => (
             <div
               key={member.id}
-              data-aos="zoom-in"
+              data-aos="fade-up"
               data-aos-delay={index * 100}
               className="bg-card border-2 border-primary rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
             >
