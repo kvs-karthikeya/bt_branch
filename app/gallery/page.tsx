@@ -1,8 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import DNAStrand from "@/components/dna-strand"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 interface GalleryImage {
   id: string
@@ -76,6 +78,10 @@ export default function GalleryPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
 
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 })
+  }, [])
+
   const categories = ["all", ...new Set(galleryImages.map((img) => img.category))]
   const filteredImages =
     selectedCategory === "all" ? galleryImages : galleryImages.filter((img) => img.category === selectedCategory)
@@ -96,8 +102,11 @@ export default function GalleryPage() {
 
       {/* Header */}
       <div className="relative z-10 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h1 className="text-6xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-4 animate-fade-in-up">
+        <div
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center"
+          data-aos="fade-up"
+        >
+          <h1 className="text-6xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-4">
             BRANCH <span className="text-primary font-light italic">GALLERY</span>
           </h1>
           <p className="text-muted-foreground font-light tracking-[0.1em] uppercase text-sm">
@@ -108,7 +117,7 @@ export default function GalleryPage() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-4 mb-16" data-aos="fade-up">
           {categories.map((category) => (
             <button
               key={category}
@@ -133,6 +142,7 @@ export default function GalleryPage() {
           {filteredImages.map((image) => (
             <div
               key={image.id}
+              data-aos="fade-up"
               onClick={() => {
                 setSelectedImage(image)
                 setCurrentIndex(0)
@@ -157,7 +167,7 @@ export default function GalleryPage() {
         {/* Lightbox Modal */}
         {selectedImage && (
           <div className="fixed inset-0 bg-background/95 backdrop-blur-xl z-[60] flex items-center justify-center p-8">
-            <div className="relative max-w-4xl w-full">
+            <div className="relative max-w-4xl w-full" data-aos="fade-up">
               {/* Close Button */}
               <button
                 onClick={() => setSelectedImage(null)}
