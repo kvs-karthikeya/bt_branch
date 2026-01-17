@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Search, Briefcase, MapPin, Mail, Phone, ChevronLeft, ChevronRight } from "lucide-react"
+import { Search, Briefcase, MapPin, Mail, Linkedin, ChevronLeft, ChevronRight } from "lucide-react"
 import DNAStrand from "@/components/dna-strand"
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -282,13 +282,21 @@ export default function AlumniPage() {
                     <Mail size={16} />
                     Email
                   </a>
-                  <a
-                    href={`tel:${member.phone}`}
-                    className="flex items-center gap-2 px-3 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors text-sm font-medium"
+                  {member.linkedIn &&(
+                <a
+                  href={
+                    member.linkedIn.startsWith("http")
+                    ? member.linkedIn
+                    : `https://${member.linkedIn}`
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors text-sm font-medium"
                   >
-                    <Phone size={16} />
-                    Call
-                  </a>
+                <Linkedin size={16} />
+                  LinkedIn
+                </a>
+                  )}
                 </div>
               </div>
             </div>
