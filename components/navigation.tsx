@@ -18,7 +18,7 @@ export default function Navigation() {
     { label: "BOLT Club", href: "/bolt" },
     { label: "Alumni", href: "/alumni" },
     { label: "Community", href: "/community" },
-    { label: "Smart Select", href: "https://your-smart-select-link.com", external: true },
+    { label: "Smart Select", href: "https://mostly-final-hzxh.vercel.app/", external: true },
     { label: "Gallery", href: "/gallery" }, // Added Gallery link
   ]
 
