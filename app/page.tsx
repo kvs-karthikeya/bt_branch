@@ -98,8 +98,8 @@ export default function Home() {
     {
       icon: ImageIcon,
       title: "Smart Select",
-      description: "https://mostly-final-hzxh.vercel.app/",
-      href: "/about",
+      description: "Explore",
+      href: "https://mostly-final-hzxh.vercel.app/",
     },
     {
       icon: ImageIcon,
