@@ -61,9 +61,9 @@ export default function Home() {
   const features = [
     {
       icon: BookOpen,
-      title: "Resources",
+      title: "About Us",
       description: "Access study materials, lecture notes, and question papers organized by year and subject",
-      href: "/resources",
+      href: "/about",
     },
     {
       icon: Users,
@@ -73,27 +73,39 @@ export default function Home() {
     },
     {
       icon: Users2,
-      title: "BOLT Club",
+      title: "Resources",
       description: "Explore our vibrant student club with events, members, and activities",
-      href: "/bolt",
+      href: "/resources",
     },
     {
       icon: Users,
-      title: "Alumni Network",
+      title: "BOLT CLUB",
       description: "Connect with successful alumni and explore career opportunities",
+      href: "/bolt",
+    },
+    {
+      icon: ImageIcon,
+      title: "Alumni",
+      description: "Explore interactive visuals showcasing branch events, campus life, and achievements",
       href: "/alumni",
     },
     {
       icon: ImageIcon,
-      title: "Photo Gallery",
-      description: "Explore interactive visuals showcasing branch events, campus life, and achievements",
-      href: "/gallery",
+      title: "Community",
+      description: "Explore us",
+      href: "/community",
     },
     {
       icon: ImageIcon,
-      title: "About Us",
-      description: "Explore us",
+      title: "Smart Select",
+      description: "https://mostly-final-hzxh.vercel.app/",
       href: "/about",
+    },
+    {
+      icon: ImageIcon,
+      title: "Gallery",
+      description: "Explore us",
+      href: "/gallery",
     },
   ]
 
