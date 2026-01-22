@@ -92,10 +92,11 @@ export default function AboutPage() {
           <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground">
             About the Department
           </h2>
+          <div className="w-12 h-1 bg-primary mx-auto rounded-full"></div>
           <p
             data-aos="fade-up"
             data-aos-delay="100"
-            className="text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto"
+            className=""
           >
             The Department of Biotechnology is committed to academic excellence, innovative research, and industry-driven
             education. We offer a dynamic curriculum that blends theoretical foundations with hands-on laboratory
@@ -110,6 +111,7 @@ export default function AboutPage() {
           <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground">
             About the Website
           </h2>
+          <div className="w-12 h-1 bg-primary mx-auto rounded-full"></div>
           <p
             data-aos="fade-up"
             data-aos-delay="100"
@@ -128,6 +130,7 @@ export default function AboutPage() {
           <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground mb-20">
             Message from Leadership
           </h2>
+          <div className="w-12 h-1 bg-primary mx-auto rounded-full"></div>
 
           {/* HOD Message */}
           <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
