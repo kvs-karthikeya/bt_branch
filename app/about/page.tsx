@@ -1,6 +1,9 @@
 "use client"
 
 import { useEffect } from "react"
+import ChevronLeft,
+  ChevronRight,
+  ImageIcon,
 import { Target, Award, Users, Mail, Phone, MapPin } from "lucide-react"
 import AOS from "aos"
 import "aos/dist/aos.css"
