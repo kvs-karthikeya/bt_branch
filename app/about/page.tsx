@@ -92,7 +92,7 @@ export default function AboutPage() {
           <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground">
             About the Department
           </h2>
-          <div className="w-12 h-1 bg-primary mx-auto rounded-full"></div>
+          <div className="w-12 h-1 bg-primary mx-auto rounded-full" data-aos="fade-up"></div>
           <p
             data-aos="fade-up"
             data-aos-delay="100"
@@ -111,7 +111,7 @@ export default function AboutPage() {
           <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground">
             About the Website
           </h2>
-          <div className="w-12 h-1 bg-primary mx-auto rounded-full"></div>
+          <div className="w-12 h-1 bg-primary mx-auto rounded-full" data-aos="fade-up"></div>
           <p
             data-aos="fade-up"
             data-aos-delay="100"
