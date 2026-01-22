@@ -103,7 +103,7 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
-      
+
       {/* About the Website */}
       <section className="py-24 sm:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
@@ -120,7 +120,9 @@ export default function AboutPage() {
             and modern academic experience.
           </p>
         </div>
-
+      </section>
+      
+       {/* Message from Leadership */}
       <section className="py-24 sm:py-32 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground mb-20">
