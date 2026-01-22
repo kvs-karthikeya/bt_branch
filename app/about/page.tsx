@@ -85,6 +85,42 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      
+      {/* About the Department */}
+      <section className="py-24 sm:py-32 border-y border-border">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+          <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground">
+            About the Department
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto"
+          >
+            The Department of Biotechnology is committed to academic excellence, innovative research, and industry-driven
+            education. We offer a dynamic curriculum that blends theoretical foundations with hands-on laboratory
+            experience, preparing students for careers in research, healthcare, industry, and entrepreneurship.
+          </p>
+        </div>
+      </section>
+      
+      {/* About the Department */}
+      <section className="py-24 sm:py-32 border-y border-border">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+          <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground">
+            About the Department
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto"
+          >
+            The Department of Biotechnology is committed to academic excellence, innovative research, and industry-driven
+            education. We offer a dynamic curriculum that blends theoretical foundations with hands-on laboratory
+            experience, preparing students for careers in research, healthcare, industry, and entrepreneurship.
+          </p>
+        </div>
+      </section>
 
       <section className="py-24 sm:py-32 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
