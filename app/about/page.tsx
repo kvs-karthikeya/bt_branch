@@ -130,6 +130,44 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      
+            {/* RECRUITERS */}
+      <section className="relative bg-background py-32 border-y border-border overflow-hidden" id="recruiters-section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+          <div className="space-y-4" data-aos="fade-up">
+            <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-foreground">Our Recruiters</h2>
+            <div className="w-12 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
+
+          <div
+            className="relative max-w-4xl mx-auto h-48 flex items-center justify-center bg-secondary/20 rounded-3xl border border-border"
+            data-aos="fade-up"
+          >
+            <div className="flex transition-all duration-700 ease-in-out">
+              <img
+                src={recruiters[recruiterIndex].logo || "/placeholder.svg"}
+                alt={recruiters[recruiterIndex].name}
+                className="h-24 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all"
+              />
+            </div>
+
+            <button
+              data-aos="fade-up"
+              onClick={() => setRecruiterIndex((prev) => (prev - 1 + recruiters.length) % recruiters.length)}
+              className="absolute left-4 p-2 rounded-full bg-background border border-border hover:border-primary transition-colors"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              data-aos="fade-up"
+              onClick={() => setRecruiterIndex((prev) => (prev + 1) % recruiters.length)}
+              className="absolute right-4 p-2 rounded-full bg-background border border-border hover:border-primary transition-colors"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+      </section>
 
       <section className="py-24 sm:py-32 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
