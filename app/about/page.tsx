@@ -1,13 +1,29 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Target, Award, Users, Mail, Phone, MapPin, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
 export default function AboutPage() {
+  const [recruiterIndex, setRecruiterIndex] = useState(0)
+
+  const recruiters = [
+    { name: "Google", logo: "/google-logo.png" },
+    { name: "Microsoft", logo: "/microsoft-logo.png" },
+    { name: "Amazon", logo: "/amazon-logo.png" },
+    { name: "Meta", logo: "/meta-logo-abstract.png" },
+  ]
+  
   useEffect(() => {
     AOS.init({ duration: 1000, once: true })
+  }, [])
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRecruiterIndex((prev) => (prev + 1) % recruiters.length)
+    }, 4000)
+    return () => clearInterval(interval)
   }, [])
 
   return (
