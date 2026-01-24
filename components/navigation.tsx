@@ -34,7 +34,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center -ml-15">
             <Image
-              src="/btec.jpeg"
+              src="/btec.png"
               alt="Logo"
               className="h-8 w-auto object-contain grayscale opacity-90 hover:opacity-100 transition"
               width={0}
