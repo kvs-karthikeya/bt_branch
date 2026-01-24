@@ -257,7 +257,7 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
                   <Mail size={18} />
                   <span className="text-xs font-bold tracking-widest uppercase">Email</span>
                 </div>
-                <p className="text-foreground font-light">info@university-branch.edu</p>
+                <p className="text-foreground font-light">deptbiotechklu@gmail.com</p>
               </div>
               <div data-aos="fade-up" data-aos-delay="100" className="space-y-4">
                 <div className="flex items-center gap-3 text-primary">
