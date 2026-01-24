@@ -24,7 +24,7 @@ const mockFaculty: Faculty[] = [
   {
     id: "1",
     name: "Dr. Praveen Kumar Vemuri",
-    designation: "Head Of the Department & Professor",
+    designation: "Head Of Department & Professor",
     subjects: ["Genetic Engineering", "Immunology"],
     batch: "Y23 & Y24",
     email: "vemuripraveen@kluniversity.in",
@@ -37,7 +37,7 @@ const mockFaculty: Faculty[] = [
   {
     id: "2",
     name: "Dr. Chandrashekhar Chanda",
-    designation: "Deputy HOD",
+    designation: "Deputy Head Of Department",
     subjects: ["Cell Biology", "Medical Laboratory Technology"],
     batch: "Y24",
     email: "vemuripraveen@kluniversity.in",
