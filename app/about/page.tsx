@@ -64,8 +64,19 @@ export default function AboutPage() {
             data-aos-delay="100"
             className="text-muted-foreground font-light leading-relaxed"
           >
-            Established in 2002, the Department of Biotechnology was strategically envisioned to advance the seamless convergence of life sciences, engineering principles, and emerging technological frameworks. It stands as the first Biotechnology department in South India to secure accreditation from the National Board of Accreditation (NBA) and continues to be strengthened through support from the DST–FIST initiative for advanced research infrastructure.
-The department is distinguished by a fully doctorate-qualified faculty drawn from premier national institutions including IISc, IITs, and NITs, possessing interdisciplinary expertise across plant sciences, fermentation engineering, cancer and neurobiology, biomaterials, and in silico drug discovery. Faculty-driven research, sustained by competitive funding from leading national and international agencies such as DBT, DST, UGC, MSME, and ICMR, has mobilized grants exceeding ₹34 crores and yielded high-impact scholarly publications with translational relevance. An extensive ecosystem of state-of-the-art academic and research laboratories, augmented by innovation and incubation centers, houses sophisticated analytical instrumentation and high-performance computing capabilities that catalyze scientific inquiry and entrepreneurial advancement. The department delivers outcome-based, flexible academic pathways reinforced by industry partnerships, international academic exposure, and globally networked instruction, thereby producing graduates equipped for leadership in core biotechnology domains and technology-intensive interdisciplinary careers.
+            Established in 2002, the Department of Biotechnology was strategically envisioned to advance the seamless
+            convergence of life sciences, engineering principles, and emerging technological frameworks. It stands as 
+            the first Biotechnology department in South India to secure accreditation from the National Board of Accreditation 
+            (NBA) and continues to be strengthened through support from the DST–FIST initiative for advanced research infrastructure.
+The department is distinguished by a fully doctorate-qualified faculty drawn from premier national institutions including IISc, IITs,
+            and NITs, possessing interdisciplinary expertise across plant sciences, fermentation engineering, cancer and neurobiology, 
+            biomaterials, and in silico drug discovery. Faculty-driven research, sustained by competitive funding from leading national 
+            and international agencies such as DBT, DST, UGC, MSME, and ICMR, has mobilized grants exceeding ₹34 crores and yielded high-impact 
+            scholarly publications with translational relevance. An extensive ecosystem of state-of-the-art academic and research laboratories, 
+            augmented by innovation and incubation centers, houses sophisticated analytical instrumentation and high-performance computing capabilities
+            that catalyze scientific inquiry and entrepreneurial advancement. The department delivers outcome-based, flexible academic pathways
+            reinforced by industry partnerships, international academic exposure, and globally networked instruction, thereby producing graduates 
+            equipped for leadership in core biotechnology domains and technology-intensive interdisciplinary careers.
 
           </p>
         </div>
@@ -79,7 +90,8 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             </div>
             <h2 className="text-3xl font-light text-foreground">Mission</h2>
             <p className="text-muted-foreground font-light leading-relaxed">
-              To cultivate a rigorous academic and research ecosystem that advances innovative scholarship, professional mastery, and ethical stewardship in biological engineering and related scientific disciplines.
+              To cultivate a rigorous academic and research ecosystem that advances innovative scholarship, 
+              professional mastery, and ethical stewardship in biological engineering and related scientific disciplines.
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="100" className="space-y-6">
@@ -88,7 +100,8 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             </div>
             <h2 className="text-3xl font-light text-foreground">Vision</h2>
             <p className="text-muted-foreground font-light leading-relaxed">
-              To achieve international distinction in advancing excellence in education, frontier research, and extension across emerging domains of biological engineering and allied interdisciplinary sciences.
+              To achieve international distinction in advancing excellence in education, frontier research, 
+              and extension across emerging domains of biological engineering and allied interdisciplinary sciences.
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="200" className="space-y-6">
@@ -97,7 +110,8 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             </div>
             <h2 className="text-3xl font-light text-foreground">Community</h2>
             <p className="text-muted-foreground font-light leading-relaxed">
-              A student-anchored academic community fostering collaborative learning, intellectual engagement, and progressive technical maturity through collective academic endeavor.
+              A student-anchored academic community fostering collaborative learning, intellectual engagement,
+              and progressive technical maturity through collective academic endeavor.
             </p>
           </div>
         </div>
@@ -144,7 +158,7 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
                 "I encourage you to use this phase of your journey to challenge yourself meaningfully and to 
                 pursue excellence with both ambition and responsibility."
               </p>
-              <p className="text-primary font-medium">Dr. [HOD Name]</p>
+              <p className="text-primary font-medium">Dr. Praveen Kumar Vemuri</p>
             </div>
             <div data-aos="fade-left" className="order-1 lg:order-2 flex justify-center">
               <div className="w-64 h-80 rounded-2xl bg-secondary border border-border overflow-hidden shadow-lg">
@@ -171,15 +185,17 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             <div data-aos="fade-left" className="space-y-6">
               <h3 className="text-2xl font-light text-foreground">Deputy Head of Department</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
-                "The strength of our department lies not in individual brilliance, but in our collective dedication to
-                nurturing talent. Every student who walks through our doors has the potential to change the world, and
-                our role is to provide them with the tools, mentorship, and inspiration they need."
+                "Progress in any technical discipline is built through consistent effort, thoughtful 
+                engagement, and a willingness to refine one’s approach over time. Your growth will depend 
+                on how deliberately you develop skills, respond to challenges, and translate learning into 
+                capability. Pay attention to the habits you form, the standards you uphold, and the choices you make 
+                in shaping your academic trajectory."
               </p>
               <p className="text-muted-foreground font-light leading-relaxed">
-                "I witness daily the transformative power of education, and I am honored to be part of this journey with
-                our students and faculty."
+                "A focused and reflective approach today will lay the foundation for competence, resilience, 
+                and long-term professional confidence."
               </p>
-              <p className="text-primary font-medium">Prof. [Deputy HOD Name]</p>
+              <p className="text-primary font-medium">Dr. Chandrashekhar Chanda</p>
             </div>
           </div>
         </div>
