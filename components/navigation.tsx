@@ -39,7 +39,7 @@ export default function Navigation() {
               className="h-8 w-auto object-contain grayscale opacity-90 hover:opacity-100 transition"
               width={0}
               height={0}
-              className="h-29 w-auto object-contain"
+              className="h-30 w-auto object-contain"
             />
           </Link>
 
