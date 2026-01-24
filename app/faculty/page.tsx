@@ -36,8 +36,8 @@ const mockFaculty: Faculty[] = [
   },
   {
     id: "2",
-    name: "Prof. Chandrashekhar",
-    designation: "deputy HOD",
+    name: "Dr. Chandrashekhar Chanda",
+    designation: "Deputy HOD",
     subjects: ["Cell Biology", "Medical Laboratory Technology"],
     batch: "Y24",
     email: "vemuripraveen@kluniversity.in",
