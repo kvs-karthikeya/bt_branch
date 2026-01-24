@@ -51,8 +51,27 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      
+      {/* About the Department */}
+      <section className="py-24 sm:py-32 border-y border-border">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+          <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground">
+            About the Department
+          </h2>
+          <div className="w-12 h-1 bg-primary mx-auto rounded-full" data-aos="fade-up"></div>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className=""
+          >
+            The Department of Biotechnology is committed to academic excellence, innovative research, and industry-driven
+            education. We offer a dynamic curriculum that blends theoretical foundations with hands-on laboratory
+            experience, preparing students for careers in research, healthcare, industry, and entrepreneurship.
+          </p>
+        </div>
+      </section>
 
-      <section className="py-24 sm:py-32">
+            <section className="py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div data-aos="fade-up" className="space-y-6">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
@@ -83,25 +102,6 @@ export default function AboutPage() {
               Built for students, by students. A collaborative ecosystem fostering growth and technical maturity.
             </p>
           </div>
-        </div>
-      </section>
-      
-      {/* About the Department */}
-      <section className="py-24 sm:py-32 border-y border-border">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 data-aos="fade-up" className="text-4xl sm:text-6xl font-light tracking-tight text-foreground">
-            About the Department
-          </h2>
-          <div className="w-12 h-1 bg-primary mx-auto rounded-full" data-aos="fade-up"></div>
-          <p
-            data-aos="fade-up"
-            data-aos-delay="100"
-            className=""
-          >
-            The Department of Biotechnology is committed to academic excellence, innovative research, and industry-driven
-            education. We offer a dynamic curriculum that blends theoretical foundations with hands-on laboratory
-            experience, preparing students for careers in research, healthcare, industry, and entrepreneurship.
-          </p>
         </div>
       </section>
 
