@@ -135,14 +135,14 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             <div data-aos="fade-right" className="space-y-6 order-2 lg:order-1">
               <h3 className="text-2xl font-light text-foreground">Head of Department</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
-                "Education is not about filling minds with information, but igniting them with possibilities. At our
-                department, we believe in fostering excellence through innovation, collaboration, and a deep commitment
-                to student success. Our students are not just learners; they are pioneers shaping the future of
-                technology and academia."
+                "Education, at its highest level, is an invitation to think independently and act with purpose. As students of this discipline, 
+                you are expected to cultivate intellectual curiosity, disciplined reasoning, and the confidence to explore ideas beyond 
+                conventional boundaries. The path before you will demand persistence, originality, and integrity, but it will also offer 
+                the opportunity to shape your own academic and professional identity."
               </p>
               <p className="text-muted-foreground font-light leading-relaxed">
-                "I am proud of what we have built here—a community where curiosity meets rigor, where challenges become
-                opportunities, and where every student finds their path to greatness."
+                "I encourage you to use this phase of your journey to challenge yourself meaningfully and to 
+                pursue excellence with both ambition and responsibility."
               </p>
               <p className="text-primary font-medium">Dr. [HOD Name]</p>
             </div>
