@@ -64,9 +64,9 @@ export default function AboutPage() {
             data-aos-delay="100"
             className=""
           >
-            The Department of Biotechnology is committed to academic excellence, innovative research, and industry-driven
-            education. We offer a dynamic curriculum that blends theoretical foundations with hands-on laboratory
-            experience, preparing students for careers in research, healthcare, industry, and entrepreneurship.
+            Established in 2002, the Department of Biotechnology was strategically envisioned to advance the seamless convergence of life sciences, engineering principles, and emerging technological frameworks. It stands as the first Biotechnology department in South India to secure accreditation from the National Board of Accreditation (NBA) and continues to be strengthened through support from the DST–FIST initiative for advanced research infrastructure.
+The department is distinguished by a fully doctorate-qualified faculty drawn from premier national institutions including IISc, IITs, and NITs, possessing interdisciplinary expertise across plant sciences, fermentation engineering, cancer and neurobiology, biomaterials, and in silico drug discovery. Faculty-driven research, sustained by competitive funding from leading national and international agencies such as DBT, DST, UGC, MSME, and ICMR, has mobilized grants exceeding ₹34 crores and yielded high-impact scholarly publications with translational relevance. An extensive ecosystem of state-of-the-art academic and research laboratories, augmented by innovation and incubation centers, houses sophisticated analytical instrumentation and high-performance computing capabilities that catalyze scientific inquiry and entrepreneurial advancement. The department delivers outcome-based, flexible academic pathways reinforced by industry partnerships, international academic exposure, and globally networked instruction, thereby producing graduates equipped for leadership in core biotechnology domains and technology-intensive interdisciplinary careers.
+
           </p>
         </div>
       </section>
