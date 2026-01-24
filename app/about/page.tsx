@@ -149,7 +149,7 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             <div data-aos="fade-left" className="order-1 lg:order-2 flex justify-center">
               <div className="w-64 h-80 rounded-2xl bg-secondary border border-border overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop"
+                  src="/about/dr-praveen-kumar.jpeg"
                   alt="Head of Department"
                   className="w-full h-full object-cover"
                 />
