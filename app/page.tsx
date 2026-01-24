@@ -96,7 +96,7 @@ export default function Home() {
   const departmentSocials = [
     { icon: Instagram, href: "https://www.instagram.com/kl_zenbiotech", label: "Instagram" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/biotechnology-department-600111221", label: "LinkedIn" },
-    { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+    { icon: Youtube, href: "https://youtube.com/@praveenvemuri", label: "YouTube" },
     { icon: Globe, href: "https://www.kluniversity.in/bt/", label: "Website" },
   ]
 
