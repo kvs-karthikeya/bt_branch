@@ -57,7 +57,7 @@ const mockFaculty: Faculty[] = [
     phone: "9810655546",
     officeNumber: "C-505",
     availableHours: "Mon-Sat: 9:20AM - 5:30PM",
-    image: "",
+    image: "/faculty/dr-bvls-prasad-sir.jpeg",
     linkedinUrl: "",
   },
   {
