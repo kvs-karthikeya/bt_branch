@@ -79,8 +79,7 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             </div>
             <h2 className="text-3xl font-light text-foreground">Mission</h2>
             <p className="text-muted-foreground font-light leading-relaxed">
-              Empowering students through advanced digital infrastructure and transparent access to institutional
-              knowledge.
+              To cultivate a rigorous academic and research ecosystem that advances innovative scholarship, professional mastery, and ethical stewardship in biological engineering and related scientific disciplines.
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="100" className="space-y-6">
@@ -89,8 +88,7 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             </div>
             <h2 className="text-3xl font-light text-foreground">Vision</h2>
             <p className="text-muted-foreground font-light leading-relaxed">
-              To be the benchmark for university department interfaces, merging aesthetics with high-performance
-              utility.
+              To achieve international distinction in advancing excellence in education, frontier research, and extension across emerging domains of biological engineering and allied interdisciplinary sciences.
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="200" className="space-y-6">
@@ -99,7 +97,7 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             </div>
             <h2 className="text-3xl font-light text-foreground">Community</h2>
             <p className="text-muted-foreground font-light leading-relaxed">
-              Built for students, by students. A collaborative ecosystem fostering growth and technical maturity.
+              A student-anchored academic community fostering collaborative learning, intellectual engagement, and progressive technical maturity through collective academic endeavor.
             </p>
           </div>
         </div>
