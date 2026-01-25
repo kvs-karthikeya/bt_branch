@@ -127,7 +127,7 @@ const mockFaculty: Faculty[] = [
     phone: "9182238439",
     officeNumber: "C-505",
     availableHours: "Mon-Sat: 9:20AM-5:30PM",
-    image: "/faculty/dr-venkata-rajesh-yella.JPG",
+    image: "/faculty/dr-venkata-rajesh-yella-sir.JPG.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/venkata-rajesh-yella-620ba1166/",
   },
 ]
