@@ -149,14 +149,15 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             <div data-aos="fade-right" className="space-y-6 order-2 lg:order-1">
               <h3 className="text-2xl font-light text-foreground">Head of Department</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
-                "Education, at its highest level, is an invitation to think independently and act with purpose. As students of this discipline, 
-                you are expected to cultivate intellectual curiosity, disciplined reasoning, and the confidence to explore ideas beyond 
-                conventional boundaries. The path before you will demand persistence, originality, and integrity, but it will also offer 
-                the opportunity to shape your own academic and professional identity."
+                "Education, at its highest level, is an exercise in expanding intellectual possibility and shaping 
+                purposeful inquiry. The Department of Biotechnology is built on the conviction that academic excellence emerges 
+                from the integration of rigorous thought, innovative practice, and sustained engagement with emerging scientific 
+                frontiers. This platform reflects our commitment to creating an environment where students are encouraged to 
+                think independently, collaborate meaningfully, and pursue knowledge with depth and intent."
               </p>
               <p className="text-muted-foreground font-light leading-relaxed">
-                "I encourage you to use this phase of your journey to challenge yourself meaningfully and to 
-                pursue excellence with both ambition and responsibility."
+                "What has been developed here is not merely an academic structure, but a space that supports aspiration, 
+                nurtures curiosity, and enables students to evolve into contributors to science, technology, and society."
               </p>
               <p className="text-primary font-medium">Dr. Praveen Kumar Vemuri</p>
             </div>
@@ -185,15 +186,15 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             <div data-aos="fade-left" className="space-y-6">
               <h3 className="text-2xl font-light text-foreground">Deputy Head of Department</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
-                "Progress in any technical discipline is built through consistent effort, thoughtful 
-                engagement, and a willingness to refine one’s approach over time. Your growth will depend 
-                on how deliberately you develop skills, respond to challenges, and translate learning into 
-                capability. Pay attention to the habits you form, the standards you uphold, and the choices you make 
-                in shaping your academic trajectory."
+                "The strength of an academic ecosystem lies in how effectively it enables access, 
+                continuity, and informed academic decision-making. This website has been conceived as a structured 
+                interface between students and the department’s academic, research, and collaborative dimensions. 
+                It is intended to support clarity in learning pathways, promote engagement with academic resources, and 
+                encourage informed participation in departmental activities."
               </p>
               <p className="text-muted-foreground font-light leading-relaxed">
-                "A focused and reflective approach today will lay the foundation for competence, resilience, 
-                and long-term professional confidence."
+                "Students are expected to utilize this platform not passively, but as a tool to organize their academic journey, 
+                align their efforts with evolving disciplinary demands, and progressively refine their professional direction."
               </p>
               <p className="text-primary font-medium">Dr. Chandrashekhar Chanda</p>
             </div>
