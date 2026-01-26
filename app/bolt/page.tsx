@@ -141,8 +141,7 @@ export default function BOLTPage() {
             data-aos="fade-up"
             data-aos-delay="150"
           >
-            Building Opportunities for Learning and Technology - A vibrant community of tech enthusiasts, innovators,
-            and learners dedicated to advancing technology and fostering collaboration.
+            A departmental student initiative promoting technical competence, innovation, and collaborative engagement
           </p>
         </div>
       </div>
