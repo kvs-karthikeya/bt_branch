@@ -45,8 +45,8 @@ export default function AboutPage() {
               data-aos-delay="200"
               className="text-xl text-muted-foreground font-light leading-relaxed"
             >
-              We are defining the intersection of academic excellence and digital innovation. Our mission is to create a
-              seamless interface for the modern student.
+              A consolidated overview of the department’s academic philosophy, leadership intent, 
+              institutional profile, and digital academic platform shaping its educational and research ecosystem.
             </p>
           </div>
         </div>
