@@ -129,9 +129,14 @@ The department is distinguished by a fully doctorate-qualified faculty drawn fro
             data-aos-delay="100"
             className="text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto"
           >
-            This platform serves as a centralized digital hub for students, faculty, and alumni. It provides access to
-            academic resources, departmental updates, student initiatives, and career opportunities, ensuring a seamless
-            and modern academic experience.
+            This website has been developed as an integrated academic platform to enhance access to departmental
+            information, academic resources, and institutional engagement, while incorporating intelligent tools
+            that support the summarization and contextual explanation of study materials. It is designed to organize
+            learning content, faculty information, academic activities, and community initiatives within a coherent and 
+            navigable digital framework. Beyond information dissemination, the platform facilitates informed academic decision-making, 
+            continuity in learning, and structured interaction among students, faculty, and departmental stakeholders. The 
+            website represents an evolving academic ecosystem aligned with institutional standards, leveraging artificial 
+            intelligence to complement formal academic processes and promote clarity, efficiency, and sustained academic engagement.
           </p>
         </div>
       </section>
