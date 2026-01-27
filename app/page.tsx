@@ -58,25 +58,25 @@ export default function Home() {
     {
       icon: Users2,
       title: "Resources",
-      description: "Explore our vibrant student club with events, members, and activities",
+      description: "Curated academic content, podcasts, and schedules.",
       href: "/resources",
     },
     {
       icon: Users,
       title: "BOLT CLUB",
-      description: "Connect with successful alumni and explore career opportunities",
+      description: "A student-led innovative and collaborative forum",
       href: "/bolt",
     },
     {
       icon: ImageIcon,
       title: "Alumni",
-      description: "Explore interactive visuals showcasing branch events, campus life, and achievements",
+      description: "An enduring network of academic affiliation",
       href: "/alumni",
     },
     {
       icon: ImageIcon,
       title: "Community",
-      description: "Explore us",
+      description: "A structured collective for academic engagement.",
       href: "/community",
     },
     {
@@ -88,7 +88,7 @@ export default function Home() {
     {
       icon: ImageIcon,
       title: "Gallery",
-      description: "Explore us",
+      description: "A visual chronicle of academic engagement",
       href: "/gallery",
     },
   ]
