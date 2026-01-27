@@ -46,7 +46,7 @@ export default function Home() {
     {
       icon: BookOpen,
       title: "About Us",
-      description: "Access study materials, lecture notes, and question papers organized by year and subject",
+      description: "An integrated view of the department’s academic identity, leadership, and digital ecosystem",
       href: "/about",
     },
     {
