@@ -67,7 +67,7 @@ export default function ResourcesPage() {
             Academic <span className="text-primary font-light italic">Repository</span>
           </h1>
           <p className="text-muted-foreground uppercase tracking-[0.3em] font-bold text-xs" data-aos="fade-up" data-aos-delay="200">
-            Knowledge Repository
+            An organized framework for accessing and contextualizing academic resources
           </p>
         </div>
       </div>
