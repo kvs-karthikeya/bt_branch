@@ -163,7 +163,7 @@ export default function AlumniPage() {
         data-aos-delay="200"
         className="text-xl text-muted-foreground font-light leading-relaxed"
       >
-        Connect with our successful alumni and explore career opportunities.
+        A dedicated space for alumni connection and institutional continuity.
       </p>
     </div>
   </div>
