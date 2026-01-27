@@ -110,7 +110,7 @@ export default function GalleryPage() {
             BRANCH <span className="text-primary font-light italic">GALLERY</span>
           </h1>
           <p className="text-muted-foreground font-light tracking-[0.1em] uppercase text-sm">
-            Visualizing Excellence and Innovation
+            A curated visual archive of departmental activities
           </p>
         </div>
       </div>
