@@ -106,7 +106,7 @@ export default function ResourcesPage() {
           <SubsectionHeader
             icon={Calendar}
             title="Academic Time Table"
-            description="Stay aligned with academic schedules"
+            description="Stay aligned with course progression"
           />
           <YearGrid items={timetables} buttonLabel="View Schedule" />
         </section>
