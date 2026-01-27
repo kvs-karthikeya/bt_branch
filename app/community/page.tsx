@@ -83,7 +83,7 @@ export default function CommunityPage() {
         data-aos-delay="200"
         className="text-xl text-muted-foreground font-light leading-relaxed"
       >
-        Join your batch WhatsApp groups to stay connected with peers and receive official updates.
+        Cohort-based channels supporting peer engagement and authenticated academic communication.
       </p>
     </div>
   </div>
