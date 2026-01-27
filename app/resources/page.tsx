@@ -64,7 +64,7 @@ export default function ResourcesPage() {
       <div className="relative py-24 border-b border-border bg-gradient-to-b from-primary/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-7xl font-extralight tracking-tighter text-foreground mb-6" data-aos="fade-up">
-            Academic <span className="text-primary font-light italic">Intelligence</span>
+            Academic <span className="text-primary font-light italic">Repository</span>
           </h1>
           <p className="text-muted-foreground uppercase tracking-[0.3em] font-bold text-xs" data-aos="fade-up" data-aos-delay="200">
             Knowledge Repository
