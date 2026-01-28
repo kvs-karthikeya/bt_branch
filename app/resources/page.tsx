@@ -6,7 +6,7 @@ import DNAStrand from "@/components/dna-strand"
 export default function ResourcesPage() {
   const years = [
     { label: "1st Year", link: "https://www.notion.so/1st-year-2f6bf827fb0b8077a048c37df7494304" },
-    { label: "2nd Year", link: "https://your-2nd-year-link.com" },
+    { label: "2nd Year", link: "https://www.notion.so/2nd-year-2f6bf827fb0b803ca681d3c9d6b6b39b" },
     { label: "3rd Year", link: "https://www.notion.so/3rd-year-2f5bf827fb0b80ca9523f0a44e99fcfa" },
     { label: "4th Year", link: "https://your-4th-year-link.com" },
   ]
